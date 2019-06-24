@@ -1,0 +1,101 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+    <% include css/common_css %>
+    <% include css/customerregistration_css %>
+    <script type="text/javascript">
+        function validate()
+        {
+            customername  = document.getElementById("customername").value;
+            customeremail = document.getElementById("customeremail").value;
+            customerpwd = document.getElementById("customerpwd").value;
+            customerdob = document.getElementById("customerdob").value;
+            customerlocation = document.getElementById("customerlocation").value;
+            errors = "";
+    
+            if (customername == "") {
+                errors += "Missing Name.\n";
+            } 
+            if (customeremail == "") {
+                errors += "Missing Email.\n";
+            } 
+            if (customerpwd == "") {
+                errors += "Missing Password.\n";
+            } 
+            if (customerdob == "") {
+                errors += "Missing Date of Birth.\n";
+            }        
+            if (errors != "") {
+              alert(errors);
+            }
+            else
+            {
+                
+                document.customerregistration.submit();
+            }  
+        }             
+    </script>  
+</head>
+
+<body>
+    
+    <header>
+        <% include header_customerregistration %>
+    </header>
+    
+    <h3 id = 'welcome'>
+        <center>Welcome to Meal Manager!</center>
+    </h3>
+    
+    
+    
+    <form name="customerregistration" id="customerregistration" method="post" action="/customerlogin">
+        <div id = "id1">
+                <h4 id="subheader">Please enter the below details:</h4><br><br>
+                <center>
+                <p>
+                <label for="customername">Name:</label> 
+                <input id="customername" name="customername" type="text" class="required" title="customername" >
+                </p>
+                
+                <p>
+                <label for="customeremail">Email:</label>
+                <input id="customeremail" name="customeremail" type="text" class="required" title="customeremail" >
+                </p>
+                
+                <p>
+                <label for="customerpwd">Password:</label>
+                <input id="customerpwd" name="customerpwd" type="password" class="required" title="customerpwd">
+                </p>
+                
+                <div id ='cusdob'>
+                <p>
+                <label for="customerdob">Date_of_Birth:</label> 
+                <input id="customerdob" name="customerdob" type="date" class="required" title="customerdob" >
+                </p>
+                </div>
+                
+                <div id ='cusloc'>
+                <p>
+                <label for="customerlocation">Location:</label> 
+                <select name="customerlocation" id = 'customerlocation'>
+                    <option value="San Jose"  selected>San Jose</option>
+                    <option value="Sunnyvale"> Sunnyvale </option>
+                    <option value="Palo Alto"> Palo Alto </option>
+                    <option value="Montain View"> Montain View </option>
+                    <option value="San Francisco"> San Francisco </option>
+                </select>
+                </p>
+                </div>
+            </center>        
+                <p>
+            <center> <button type="button"  onclick="validate()" id="buttonid"> <b>Register Me! </b></button></center>
+                </p>
+        </div>        
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+     <% include css/restaurant_format %>
+</head>
+
+<header>
+    <% include restaurant_loggedin_header %>
+    
+</header>
+<body>
+
+<div class="restaurant_main_display">
+	<h2> Report </h2>
+    <% if (items_present=='Y' ) { %>	
+			<table id="restaurant_view_table">
+					<tr>
+							<th>&nbsp;&nbsp;&nbsp; Item_Name &nbsp;&nbsp;</th>
+							<th>&nbsp;&nbsp; Number of Times_Ordered (For Selected Dates)&nbsp;&nbsp;</th>
+							<th>&nbsp;&nbsp; Average Rating(From Begining Of Time) &nbsp;&nbsp;</th>
+						</tr>
+					<% for(var i=0; i < query_results.length; i++) { %>
+											
+							<tr>
+								<td>&nbsp; <%=  query_results[i].Item_Name %>&nbsp;&nbsp;</td>
+								<td>&nbsp; <%=  query_results[i].Number_of_Times_Ordered %> &nbsp;&nbsp;</td>
+								<td>&nbsp; <%=  query_results[i].Average_Rating %>&nbsp;&nbsp;</td>
+							</tr>
+										
+					<% } %>             
+			</table><br><br><br>
+    <% } %>
+</div>
+
+
+    <%  if (items_present=='N' ) { %>
+    	<div class="no_data_information_message">
+        	<p>  No order placed between the selected dates!! </p>
+    	</div>
+	<% } %> 
+
+
+</body>
+</html>

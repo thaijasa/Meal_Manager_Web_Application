@@ -1,0 +1,58 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    <% include css/contactform_format %>
+
+    <script type="text/javascript">
+        function validate()
+        {
+            errors = "";
+
+            email_id  = document.getElementById("email_id").value;
+            contact_message=document.getElementById("contact_message_textbox").value;
+
+             if (email_id == "") {
+                errors += "Missing ContactId.\n";
+            } 
+             if (contact_message == "") {
+                errors += "Missing contact_message. \n";
+            } 
+            if (errors != "") {
+              alert(errors);
+            }
+            else{
+                document.update_contactform.submit();
+
+            }
+           
+        }
+      
+        
+        
+    </script>   
+</head>
+
+<body>
+<%= cust_message %>
+
+		<h2> Contact Form</h2> 
+	     <form name="update_contactform" id="update_contactform" method="POST" action="/update_contactform">
+	      		<p><label for="email_id">ContactID*:</label> </p>
+ 						<p> <input id="email_id" 
+					 		name="email_id" type="text" size="60" maxlength="60"></p>
+                             <p><label for="contact_message">Message*:</label> </p>
+                           <p>  <textarea id="contact_message_textbox" name="contact_message" cols="60" rows="10"></textarea></p>
+
+              <p>	<button type="button" onclick="validate()" >Submit Details</button></p>
+             
+          </form>   
+                               
+
+
+            
+</body>
+</html>

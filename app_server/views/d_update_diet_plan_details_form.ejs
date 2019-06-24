@@ -1,0 +1,173 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/dietician_format %>
+ <script type="text/javascript">
+        function validate()
+        {
+            breakfast_calories  = document.getElementById("breakfast_calories").value;
+            breakfast_carbohydrates=document.getElementById("breakfast_carbohydrates").value;
+           breakfast_proteins=document.getElementById("breakfast_proteins").value;
+           breakfast_fat=document.getElementById("breakfast_fat").value;
+                       lunch_calories  = document.getElementById("lunch_calories").value;
+            lunch_carbohydrates=document.getElementById("lunch_carbohydrates").value;
+           lunch_proteins=document.getElementById("lunch_proteins").value;
+           lunch_fat=document.getElementById("lunch_fat").value;
+                       dinner_calories  = document.getElementById("dinner_calories").value;
+            dinner_carbohydrates=document.getElementById("dinner_carbohydrates").value;
+           dinner_proteins=document.getElementById("dinner_proteins").value;
+           dinner_fat=document.getElementById("dinner_fat").value;
+            errors = "";
+    
+            if (breakfast_calories == "") {
+                errors += "Missing Breakfast Calories.\n";
+            } 
+             if (breakfast_carbohydrates == "") {
+                errors += "Missing Breakfast Carbohydrates.\n";
+            } 
+             if (breakfast_proteins == "") {
+                errors += "Missing Breakfast Proteins.\n";
+            } 
+             if (breakfast_fat == "") {
+                errors += "Missing Breakfast Fat.\n";
+            } 
+
+
+    
+     if (lunch_calories == "") {
+                errors += "Missing Lunch Calories.\n";
+            } 
+             if (lunch_carbohydrates == "") {
+                errors += "Missing Lunch Carbohydrates.\n";
+            } 
+             if (lunch_proteins == "") {
+                errors += "Missing Lunch Proteins.\n";
+            } 
+             if (lunch_fat == "") {
+                errors += "Missing Lunch Fat.\n";
+            } 
+            
+             if (dinner_calories == "") {
+                errors += "Missing Dinner Calories.\n";
+            } 
+             if (dinner_carbohydrates == "") {
+                errors += "Missing Dinner Carbohydrates.\n";
+            } 
+             if (dinner_proteins == "") {
+                errors += "Missing Dinner Proteins.\n";
+            } 
+             if (dinner_fat == "") {
+                errors += "Missing Dinner Fat.\n";
+            } 
+            if (errors != "") {
+              alert(errors);
+            }
+            else{
+                document.updatedietplandetailsform.submit();
+
+            }
+           
+        }
+      
+        
+        
+    </script>   
+</head>
+
+<body>
+<header>
+    <% include dietician_loggedin_header %>
+</header>
+<div class="dietician_page_info">
+           
+    <p>CustID:<%= cust_details[0].cust_id %>&nbsp;&nbsp;
+        CustName:<%=cust_details[0].cust_name%>&nbsp;&nbsp;
+        CustEmailID:<%=cust_details[0].cust_email_id%>&nbsp;&nbsp;</p>
+        <p>CustAge:<%= cust_details[0].cust_age %>&nbsp;&nbsp;
+           Height:<%=cust_details[0].height%>&nbsp;&nbsp;
+           Weight:<%=cust_details[0].weight%>&nbsp;&nbsp;
+           Sleep:<%=cust_details[0].sleep%> hrs&nbsp;&nbsp;
+           ActivityLevel:<%=cust_details[0].activity_level%>&nbsp;&nbsp;</p>
+           <p>
+				<% for(var i=0; i < cust_health_details.length; i++) {   %> 
+					<%= cust_health_details[i].a_d_type %>:<%= cust_health_details[i].allergy_disease %>&nbsp;&nbsp;
+			<% }   %> 
+			</p>        
+            	  
+</div>
+
+<div class="dietician_form_display">
+		<h2> Update Diet Plan Details</h2> 
+	     <form name="updatedietplandetailsform" id="updatedietplandetailsform" method="POST" action="/d_update_diet_plan_details_submit">
+	     		<fieldset>
+	     
+ 				<h3> &nbsp;&nbsp;Breakfast </h3>
+ 			 		<p><label for="breakfast_calories">Calories*:</label> </p>
+ 						 <input id="breakfast_calories" 
+					 		name="breakfast_calories" type="number" step="any"   class="required"  
+					 		value=<%=query_results[0].calories%> ></p>
+					 <p><label for="breakfast_proteins">Proteins*:</label> 
+					 	<input id="breakfast_proteins" 
+					 		name="breakfast_proteins" type="number" ="any"   class="required"  
+					 		value=<%=query_results[0].proteins%> ></p>
+    				<p><label for="breakfast_carbohydrates">Carbohydrates*:</label> 
+ 					 <input id="breakfast_carbohydrates" 
+						name="breakfast_carbohydrates" type="number"  step="any"   class="required"  
+						value=<%=query_results[0].carbohydrates%> ></p>
+ 					<p><label for="breakfast_fat">Fat*:</label> 
+ 						 <input id="breakfast_fat" 
+							name="breakfast_fat" type="number"  step="any"   class="required"  
+							value=<%=query_results[0].fat%> ></p>
+							
+							<h3> &nbsp;&nbsp;Lunch </h3>
+ 			 		<p><label for="lunch_calories">Calories*:</label> </p>
+ 						 <input id="lunch_calories" 
+					 		name="lunch_calories" type="number"  step="any"   class="required"  
+					 		value=<%=query_results[1].calories%> ></p>
+					 <p><label for="lunch_proteins">Proteins*:</label> 
+					 	<input id="lunch_proteins" 
+					 		name="lunch_proteins" type="number"  step="any"   class="required"  
+					 		value=<%=query_results[1].proteins%> ></p>
+    				<p><label for="lunch_carbohydrates">Carbohydrates*:</label> 
+ 					 <input id="lunch_carbohydrates" 
+						name="lunch_carbohydrates" type="number" step="any"    class="required"  
+						value=<%=query_results[1].carbohydrates%> ></p>
+ 					<p><label for="lunch_fat">Fat*:</label> 
+ 						 <input id="lunch_fat" 
+							name="lunch_fat" type="number" step="any"    class="required"  
+							value=<%=query_results[1].fat%> ></p>
+							
+							<h3> &nbsp;&nbsp;Dinner </h3>
+ 			 		<p><label for="dinner_calories">Calories*:</label> </p>
+ 						 <input id="dinner_calories" 
+					 		name="dinner_calories" type="number"  step="any"   class="required"  
+					 		value=<%=query_results[2].calories%> ></p>
+					 <p><label for="dinner_proteins">Proteins*:</label> 
+					 	<input id="dinner_proteins" 
+					 		name="dinner_proteins" type="number"  step="any"   class="required"  
+					 		value=<%=query_results[2].proteins%> ></p>
+    				<p><label for="dinner_carbohydrates">Carbohydrates*:</label> 
+ 					 <input id="dinner_carbohydrates" 
+						name="dinner_carbohydrates" type="number"  step="any"   class="required"  
+						value=<%=query_results[2].carbohydrates%> ></p>
+ 					<p><label for="dinner_fat">Fat*:</label> 
+ 						 <input id="dinner_fat" 
+							name="dinner_fat" type="number"  step="any"   class="required"  
+							value=<%=query_results[2].fat%> ></p>
+							
+              <p>	<button type="button"  onclick="validate()">Update Diet Plan Details</button></p>
+             
+          </form>   
+          		</fieldset>
+                               
+
+</div>
+
+            
+</body>
+</html>

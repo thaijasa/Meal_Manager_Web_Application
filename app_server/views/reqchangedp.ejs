@@ -1,0 +1,90 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<head>
+        <% include head %>
+
+         <% include css/customer_format %>
+
+         <script type="text/javascript">
+          
+          function validate()
+          {
+            input_date  = document.getElementById("input_date").value;  
+            desc  = document.getElementById("desc").value;
+
+            var js_input_date = new Date(input_date).toISOString().split('T')[0]; 
+            var check_day = new Date();
+            check_day.setHours(0,0,0,0);
+
+            var numberOfDaysToAdd = 3;
+            check_day.setDate(check_day.getDate() + numberOfDaysToAdd); 
+            check_day = check_day.toISOString().split('T')[0];
+            
+              errors = "";
+              
+              if(js_input_date < check_day) 
+              {
+                errors += "From Date should be atleast 3 days from now.\n";
+              }
+              if (input_date == "") {
+                  errors += "Missing From Date.\n";
+              } 
+              if (desc == "") {
+                  errors += "Missing Description.\n";
+              } 
+
+          if (errors != "") 
+          {
+                  alert(errors);
+                }
+          else
+          {         
+                   
+                    document.reqchangedp.submit();
+                }
+             
+          }
+ 
+      </script>
+    
+        
+    </head>
+
+  <body>
+        <header>
+            <% include customerheader %>
+            </header>
+            
+
+            <form name="reqchangedp" id="reqchangedp" method="post" action="/requestconfirmation">
+              <fieldset>
+                
+                <div class="heading_style">
+                <h3>Please Input your request in detail below</h3> </div>
+                
+                <div class = "input_form">
+                
+              
+                
+                <p style="font-weight: bold">From Date:  <input type="date" id="input_date" name="input_date" min= <%= start_date%>  max= <%= end_date%> >
+
+                    </p>
+                    <h5> (From Date should be atleast 3 days from now)</h5>
+                <p>
+                  <label for="desc">Description:</label> <input id="desc" 
+                    name="desc" type="text"  class="required"  title="desc" >
+          
+                <p>
+                  <button type="button" class = "submit_button" onclick="validate()">
+                    Submit</button>
+                </p>
+              </fieldset>
+            </form>
+          </div>
+              
+    
+
+  </body>
+  
+
+</html>

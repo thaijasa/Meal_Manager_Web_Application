@@ -1,0 +1,156 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<html>
+    <head>
+            <% include head %>
+            <% include css/common_css %>
+            <% include css/dieticianYesNo_css %>
+            <script type="text/javascript">
+
+                function chngedtefrmt(date)
+                {
+                    var d = new Date(date),
+                    m = '' + (d.getMonth() + 1),
+                    dy = '' + d.getDate(),
+                    y = d.getFullYear();
+
+                    if (m.length < 2)
+                    {
+                        m = '0' + m;
+                    }
+                    if (dy.length < 2) 
+                    {
+                        d = '0' + dy;
+                    }
+    
+                    return [y, m, d].join('-');
+                }
+
+                function validate()
+                {
+                    cardnumb  = document.getElementById("cardnumb").value;
+                    cardtype = document.getElementById("cardtype").value;
+                    cvv = document.getElementById("cvv").value;
+                    expdate = document.getElementById("expdate").value;
+                    startdate = document.getElementById("startdate").value;
+
+
+                errors = "";
+    
+                if (cardnumb == "") {
+                    errors += "Missing Card Number.\n";
+                } 
+                if (cardtype == "") {
+                    errors += "Missing Card Type.\n";
+                } 
+                if (cvv == "") {
+                    errors += "Missing CVV.\n";
+                } 
+                if (expdate == "") {
+                    errors += "Missing Expiry Date.\n";
+                }     
+                if (startdate == "") {
+                    errors += "Missing Start Date.\n";
+                 }   
+//check dates
+                var currDte = new Date();
+                fnlDte = chngedtefrmt (currDte)  
+
+                if (startdate <= fnlDte) {
+                    errors += "Select a Future Start Date.\n";
+                 }
+                 if (expdate <= currDte) {
+                      errors += "Your card expiry date is a past date. Please use a different card.\n";
+                 }
+
+                    if (errors != "") {
+                     alert(errors);
+                    }
+                    else
+                    {
+                        document.dieticianno.submit();
+                    }  
+                }
+                    </script>
+    </head>
+    <body>
+        <header>
+            <% include header_dieticianOption %>
+        </header>
+        
+        <form  name="dieticianno" id="dieticianno" method="post" action="/nopaymentsuccessful">
+            <h3 id ='welcome'>Meal Plan Selection</h3>
+            <!-- <p>
+                Select your meal plan from the below table:
+            </p> -->
+            <div id = 'id1'>
+            <label for="startdate">Select your meal plan from the below table:</label>
+            <center>
+            
+            <table id ='d_view_table'>
+                    <tr>
+                        <th>Select Meal Plan</th>
+                       
+                        <th>&nbsp;&nbsp;Breakfast Count </th>
+                       <th>&nbsp;&nbsp;Lunch Count </th>
+                       <th>&nbsp;&nbsp;Dinner Count </th> 
+                        <th>&nbsp;&nbsp;Price ($)</th> 
+                   </tr>
+
+
+               <% for(var i=1; i < query_results.length; i++) { %>                                   
+                       <tr>
+                           <td> <input type="radio" name="meal_plan_id" value= <%=  query_results[i].plan_id %> > </td>
+                          
+                           <td><%=  query_results[i].Breakfast_Count %></td>
+                           <td> <%=  query_results[i].lunch_Count %></td>
+                           <td> <%=  query_results[i].dinner_Count %></td>
+                           <td><%=  query_results[i].price %></td>
+                       </tr>
+                                   
+               <% } %>             
+         </table></center></div><br><br><br><br>
+                <h3 id ='welcome'>Start Date Selection</h3>
+                <div id='id1'>
+                    <p>
+                    <label for="startdate">Select start date for your meal plan:</label>
+                    <input id="startdate" name="startdate" type="date" class="required" title="startdate" ><br>
+                    </p></div><br><br><br><br>
+    
+   
+                    <h3 id ='welcome'><center>Payment Details</center></h3>
+                    <div id='id1'>
+            
+                        <p>
+                        <label for="cardnumb">Enter your card number:</label> 
+                        <input id="cardnumb" name="cardnumb" type="text" class="required" title="cardnumb" >
+                        </p>
+                        
+                        <p>
+                        <label>Select type of card:</label>
+                        <select id='cardtype' name = 'cardtype'>
+                            <option value='creditcard'> Credit Card</option>
+                            <option value="debitcard">Debit Card</option>
+                            <option value="visa">Visa</option>
+                        </select>
+                        </p>
+                        
+                        <p>
+                        <label for="cvv">CVV:</label>
+                        <input id="cvv" name="cvv" type="text" class="required" title="cvv">
+                        </p>
+                        
+                        <p>
+                        <label for="expdate">Expiry Date:</label> 
+                        <input id="expdate" name="expdate" type="date" class="required" title="expdate" >
+                        </p>
+                        
+                    </div>
+            <p>
+                    <br>  <center><b><button type="button"  onclick="validate()" id="buttonid"> SUBMIT </button></b></center><br>
+            </p>
+    </form>
+   
+
+    </body>
+</html>

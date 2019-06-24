@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+        <header>
+                <% include customerheader %>
+            </header>
+<% if (items_present=='Y' ) { %>
+    
+
+
+    <div class="heading_style">
+    <h1>Dietician Rating</h1> </div>
+
+</div>
+<div class="view_table">
+        
+        <div id="view_table_tableid">
+            <table>
+                <tr>   
+                    <th> &nbsp;&nbsp; Select Dietician &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; DieticianName &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Qualification &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Start Date &nbsp;&nbsp;</th>
+                        
+                    </tr>							
+
+                        <form name="dieticianrating" id="dieticianrating" method="POST" >
+                                <% for(var i=0; i < query_results.length; i++) { %>
+                       <tr>
+                            <td> <input type="radio" name="dietician_id" value= <%=  query_results[i].dietician_id %>  > </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].dietician_name %>&nbsp;&nbsp;
+                        <td>&nbsp;&nbsp; <%=  query_results[i].qualification %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].diet_start_date %>&nbsp;&nbsp;</td>
+                           
+                    </tr>
+                    <% } %>  
+
+                    <p>
+                            Please provide the Rating:
+                            <select name="rating" id = 'rating'>
+                              <option value=1  selected> 1 </option> 
+                              <option value=2> 2 </option>
+                              <option value=3> 3 </option> 
+                              <option value=4> 4 </option>
+                              <option value=5> 5 </option>
+                            </select>
+                    
+                        </p>
+
+                    <button type="submit" class = "single_button_history" formaction="/dieticianratingconfirmation">Submit Rating</button>
+                </form> 
+                                            
+        </div>
+    </div>
+
+
+<% } %>
+<% if (items_present=='N' ) { %>
+    <div class="information_message">
+            <h3>    Sorry....You have not enrolled with any dietician till now. So you can't provide rating for a dietician. </h3>
+    </div>
+<% } %>
+
+            
+</body>
+</html>

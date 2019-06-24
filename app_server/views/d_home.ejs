@@ -1,0 +1,41 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/dietician_format %>
+    
+
+    
+
+</head>
+<header>
+    <% include dietician_loggedin_header %>
+    
+</header>
+<body>
+ <div class=dietician_page_info>
+ 
+
+<h4><p>Email: <%= dietician_email%> </p></h4>
+
+</div>
+
+
+<div class="centered_div">
+
+    <form name="dieticianlogin" id="dieticianlogin" method="get" action="/d_home">
+		<table class="home-table">
+						<tr><td><button type="submit" class="button_home" formaction="/d_view_current_customers">View Current Customers</button></td> </tr>
+						<tr><td>    <button type="submit" class="button_home"  formaction="/d_new_diet_plan_requests">View New Diet Plan Requests</button> </td> </tr>
+						<tr><td>	<button type="submit" class="button_home"  formaction="d_update_diet_plan_requests">View Diet Update Requests</button> </td> </tr>
+
+			
+			</table>
+	</form>
+     </div>       
+</body>
+</html>

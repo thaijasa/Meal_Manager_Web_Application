@@ -1,0 +1,79 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <head><% include head %>
+        <% include css/common_css %>
+        <% include css/admin_css %>
+         <% include css/dietician_format %>
+
+<script type="text/javascript">
+        function validate()
+        {
+            userid  = document.getElementById("userid").value;
+            pwd = document.getElementById("pwd").value;
+           
+            errors = "";
+    
+            if (userid == "") {
+                errors += "Missing userid.\n";
+            } 
+            if (pwd == "") {
+                errors += "Missing password.\n";
+            } 
+          
+    
+            if (errors != "") {
+              alert(errors);
+            }
+            else{
+                document.dieticianlogin.submit();
+
+            }
+           
+        }
+      
+        
+        
+    </script>
+</head>
+<body>
+<header>
+    <% include dietician_loggedout_header %>
+</header>
+<div class="dietician_login_info">
+    <%= message%> 
+</div>
+<div class="dietician_login_form">
+
+    <form name="dieticianlogin" id="dieticianlogin" method="post" action="/d_home">
+        <div id = 'id5'>   
+        <p>
+          
+            <center> <h1 id='id3'>Dietician Login</h1></center><br>
+						
+            <center >						
+		
+			<p>
+				<label for="userid">EMAILID*:</label> <input id="userid" 
+					name="userid" type="text"  class="required"  title="USERID" >
+
+			</p>
+			<p>
+				<label for="pwd">PASSWORD*:</label> <input id="pwd" name="pwd" 
+					type="password" class="required" title="pwd">
+
+			</p>
+
+			
+			<p>
+                    <center><b>	<button type="button"  onclick="validate()" id ='buttonid'> Submit</button></b></center>
+                    </p>
+
+        </center>
+        </div> 
+	</form>
+</div>    
+
+</body>
+</html>

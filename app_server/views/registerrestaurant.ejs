@@ -1,0 +1,82 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<html>
+    <head>
+        <% include head %>
+        <% include css/common_css %>
+        <% include css/admin_css %>
+
+        <script type="text/javascript">
+            function validate()
+            {
+                restname  = document.getElementById("restname").value;
+                pwd = document.getElementById("pwd").value;
+                emailid = document.getElementById("emailid").value;
+                location = document.getElementsByName("restlocation").value;
+                errors = "";
+        
+                if (restname == "") {
+                    errors += "Missing Name of the Restaurant.\n";
+                } 
+                if (pwd == "") {
+                    errors += "Missing Password.\n";
+                } 
+                if (emailid == "") {
+                    errors += "Missing Email ID of the Restaurant.\n";
+                } 
+                if (location == "") {
+                    errors += "Missing Location.\n";
+                }        
+                if (errors != "") {
+                  alert(errors);
+                }
+                else
+                {
+                    document.registerrestaurant.submit();
+                }  
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+                <% include header_adminhome %>
+        </header>
+        <div id='id2'>
+      
+        <center>   <h1 id='id3'>Register Restaurant</h1></center> <br>
+
+        <form name="registerrestaurant" id="registerrestaurant" method="post" action="/regrestsuccesful">
+            <center>
+            
+            <p>
+                    <label for="restname">Name: </label> 
+                    <input id="restname" name="restname" type="text"  class="required"  title="restname">
+            </p>
+            <p>
+                <label for="emailid">Email_ID: </label> 
+                <input id="emailid" name="emailid" type="text"  class="required"  title="emailid">
+            </p>
+            <p>
+                <label for="pwd">Password: </label> 
+                <input id="pwd" name="pwd" type="password"  class="required"  title="pwd">
+            </p>
+           
+            <div id='cusloc'>
+            <label for="customerlocation">Location:</label>  
+                <select name="restlocation" id = 'location'>
+                    <option value="San Jose"  selected>San Jose</option>
+                    <option value="Sunnyvale"> Sunnyvale </option>
+                    <option value="Palo Alto"> Palo Alto </option>
+                    <option value="Montain View"> Montain View </option>
+                    <option value="San Francisco"> San Francisco </option>
+                </select>
+            </div>
+    
+            <p>
+                <button type="button"  onclick="validate()" id="buttonid"> SUBMIT </button>
+            </p>
+       
+    </center>
+        </form>
+        </div>
+    </body>
+</html>

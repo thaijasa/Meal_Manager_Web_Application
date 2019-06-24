@@ -1,0 +1,55 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/dietician_format %>
+    
+</head>
+
+<body>
+<header>
+    <% include dietician_loggedin_header %>
+</header>
+<div class="dietician_page_info">
+            
+	<p>CustID:<%= cust_details[0].cust_id %>&nbsp;&nbsp;
+		CustName:<%=cust_details[0].cust_name%>&nbsp;&nbsp;
+		CustEmailID:<%=cust_details[0].email_id%>&nbsp;&nbsp;</p>
+
+		 
+</div>
+
+<div class="dietician_main_display">
+	<h2>Customer Diet Plans List</h2> 
+	<% if (diet_plans_present=='Y' ) { %>
+	     <form name="d_customer_diet_plan_list" id="d_customer_diet_plan_list" method="POST" action="d_customer_diet_plan_progress">
+			<table id="dietician_view_table">
+   						<tr>
+   					 		<th> &nbsp;&nbsp; Select_Diet_Plan &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; DietRequestDate &nbsp;&nbsp;</th> 
+                		</tr>							
+                    	<% for(var i=0; i < query_results.length; i++) { %>
+                    		<tr>
+                        		<td><input type="radio" name="custid_dietstartdate" value= <%=  query_results[i].custid_dietstartdate %> checked> </td>
+								<td>&nbsp;&nbsp; <%=  query_results[i].diet_start_date.toDateString()  %>&nbsp;&nbsp;</td>
+                           </tr>
+                    	<% } %>  
+               
+             </table> 
+                	<button type="submit" class="submit_form_button" >View Diet Plan Progress</button>
+          </form>                        
+<% } %>
+<%  if (diet_plans_present=='N' ) { %>
+    	<div class="no_data_information_message">
+        	<p>  The selected customer has no diet plans! </p>
+    	</div>
+<% } %>
+</div>
+
+            
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+     <% include css/restaurant_format %>
+</head>
+
+<header>
+    <% include restaurant_loggedin_header %>
+    
+</header>
+<body>
+
+<div class="restaurant_main_display">
+	<h4 >Tomorrow's Orders</h4>
+	
+	<table id="restaurant_view_table">
+				<tr>
+					<th>&nbsp;&nbsp;&nbsp; Restaurant_ID &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Item Name &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Order Date &nbsp;&nbsp;</th>
+				</tr>
+		
+				<% for(var i=0; i < query_results.length; i++) { %>
+								
+				<tr>
+
+					<!-- <td> <input type="radio" name="Restaurant_ID" value= <%=  query_results[i].Restaurant_ID %> > </td> -->
+					<td>&nbsp; <%=  query_results[i].restaurant_id %>&nbsp;&nbsp;</td>
+					<td>&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+					<td>&nbsp; <%=  query_results[i].order_date.toDateString() %>&nbsp;&nbsp;</td>
+				</tr>
+							
+				<% } %>             
+	</table>
+</div>
+</body>
+</html>

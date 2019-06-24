@@ -1,0 +1,239 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+     <% include css/customer_format %>
+     <script type="text/javascript">
+        function validate()
+        {
+            if(document.getElementById('breakfast').checked == false && document.getElementById('lunch').checked == false && document.getElementById('dinner').checked == false) {
+               
+                alert("Select Atleast One Item");
+  
+            }
+        
+			else
+			{   
+                document.checkmenu.submit();
+            }
+           
+        }
+  
+    </script>    
+</head>
+
+<body>
+<header>
+    <% include customerheader %>
+</header>
+<% if (items_present=='Y' ) { %>
+    <form name = "checkmenu" id = "checkmenu" method="POST" action="/orderconfirmation" >
+   
+        <h5 style="color:rgb(206, 90, 22); margin-top: 40px; margin-left: 65px; text-transform: uppercase;">Breakfast Menu</h5>
+
+    <!-- Breakfast -->
+    <div class="breakfast_id">   
+
+            <div id="view_table_tableid">
+        <table>
+            <tr>
+                 <th> &nbsp;&nbsp; Select Option &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Restaurant Name &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Item Name &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th>
+                 <th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                 <th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th>
+                 <th> &nbsp;&nbsp; Average Rating &nbsp;&nbsp;</th>
+
+             </tr>                          
+             
+                <% var bf = 'False' %>
+                <% for(var i=0; i < query_results.length; i++) { %>
+                <tr>
+                    <% if(query_results[i].meal_type=='Breakfast') {%>
+                        <% bf = 'True' %>
+                        <% var bf_comb =  query_results[i].name + ',' + query_results[i].item_name %>
+                        <td> <input type="radio" name="breakfast" id = "breakfast" value= "<%=  bf_comb %>" > </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].name %>&nbsp;&nbsp;
+                        <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].calories %>&nbsp;&nbsp; </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].proteins %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates %>&nbsp;&nbsp; </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].fat %>&nbsp;&nbsp; </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].Avg_ratings %>&nbsp;&nbsp; </td>
+                    <% } %> 
+                </tr>
+                <% } %> 
+            </table> 
+
+            </div>
+        </div>
+                <%  if (bf == 'True') {%>
+
+                    <p> <div id = breakfast_time>
+                            Please choose a pick up time for your breakfast:
+                            <select name="breakfasttime" id = 'breakfasttime'>
+                                <option value="06:00" selected>06.00 AM</option>
+                                <option value="06:30">06.30 AM</option>
+                                <option value="07:00">07.00 AM</option>
+                                <option value="07:30">07.30 AM</option>
+                                <option value="08:00">08.00 AM</option>
+                                <option value="08:30">08.30 AM</option>
+                                <option value="09:00">09.00 AM</option>
+                                <option value="09:30">09.30 AM</option>
+                                <option value="10:00">10.00 AM</option>
+                                <option value="10:30">10.30 AM</option>
+                            </select>
+                
+                        </p>
+  
+                 <% } %>  
+ 
+    </div>                    
+       
+       
+        <!-- Lunch -->
+
+        <h5 style="color:rgb(206, 90, 22); margin-top: 40px; margin-left: 65px; text-transform: uppercase;">Lunch Menu</h5>
+        <div class="lunch_id">
+                <div id="view_table_tablelnid">
+                <table>
+                <tr>
+                        <th> &nbsp;&nbsp; Select Option &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Restaurant Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Item Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Average Ratings &nbsp;&nbsp;</th>
+       
+                    </tr>     
+            
+                <% var ln = 'False' %>
+               <% for(var i=0; i < query_results.length; i++) { %>
+               <tr>
+                   <% if(query_results[i].meal_type=='Lunch') {%>
+                    <% ln = 'True' %>
+                    <% var ln_comb =  query_results[i].name + ',' + query_results[i].item_name %>
+                       <td> <input type="radio" name="lunch" id = "lunch" value= "<%=  ln_comb %>" > </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].name %>&nbsp;&nbsp;
+                       <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %>&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].calories %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].proteins %>&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].fat %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].Avg_ratings %>&nbsp;&nbsp; </td>
+                   <% } %>
+               </tr>
+               <% } %> 
+
+            </table> 
+        </div>
+    </div>
+
+            <% if (ln == 'True') {%>
+                <p> <div id = lunch_time>
+                        Please choose a pick up time for your Lunch:
+                        <select name="lunchtime" id = 'lunchtime'>
+                            <option value="11:30" selected >11.30 AM</option>
+                            <option value="12:00">12.00 PM</option>
+                            <option value="12:30">12.30 PM</option>
+                            <option value="13:00">01.00 PM</option>
+                            <option value="13:30">01.30 PM</option>
+                            <option value="14:00">02.00 PM</option>
+                            <option value="14:30">02.30 PM</option>
+                            <option value="15:00">03.00 PM</option>
+                        </select>
+            
+                    </p>
+
+                    <% } %> 
+           
+                                 
+        </div>
+
+        <!-- Dinner -->
+
+        <h5 style="color:rgb(206, 90, 22); margin-top: 40px; margin-left: 65px; text-transform: uppercase;">Dinner Menu</h5>
+        <div class="dinner_id">
+                <div id="view_table_tabledinid">
+                <table>
+                <tr>
+                        <th> &nbsp;&nbsp; Select Option &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Restaurant Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Item Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Average Ratings &nbsp;&nbsp;</th>
+       
+                    </tr>     
+            
+               <% var din = 'False' %>
+               <% for(var i=0; i < query_results.length; i++) { %>
+               <tr>
+                   <% if(query_results[i].meal_type=='Dinner') {%>
+                    <% din = 'True' %>
+                    <% var din_comb =  query_results[i].name + ',' + query_results[i].item_name %>
+                       <td> <input type="radio" name="dinner" id = "dinner" value= "<%=  din_comb %>"> </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].name %>&nbsp;&nbsp;
+                       <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %>&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].calories %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].proteins %>&nbsp;&nbsp;</td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].fat %>&nbsp;&nbsp; </td>
+                       <td>&nbsp;&nbsp; <%=  query_results[i].Avg_ratings %>&nbsp;&nbsp; </td>
+                   <% } %>
+               </tr>
+               <% } %>  
+
+            </table> 
+</div>
+</div>
+            <% if (din == 'True') {%>
+                <p> <div id = dinner_time>
+                        Please choose a pick up time for your Dinner:
+                        <select name="dinnertime" id = 'dinnertime'>
+                            <option value="18:30">06.30 PM</option>
+                            <option value="19:00">07.00 PM</option>
+                            <option value="19:30">07.30 PM</option>
+                            <option value="20:00">08.00 PM</option>
+                            <option value="20:30">08.30 PM</option>
+                            <option value="21:00">09.00 PM</option>
+                            <option value="21:30">09.30 PM</option>
+                            <option value="22:00">10.00 PM</option>
+                        </select>
+            
+                    </p>
+
+                    <% } %> 
+                
+    </div>
+
+
+        <input type="submit" class = "place_order" value="PLACE ORDER"/>
+</form>
+ 
+<% } %>
+
+<% if (items_present=='N' ) { %>
+<div class="information_message">
+<h3> Sorry....There are no items on menu that meets your requirement. </h3>
+</div>
+<% } %>
+
+            
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US"></html>
+
+  <title>Meal Manager</title>
+  <head>
+      <style>
+          div {
+                padding-top: 50px;
+                padding-right: 30px;
+                padding-bottom: 50px;
+                padding-left: 100px;
+            }
+          #websitetitle{
+            font-family: fantasy;
+            border-bottom: 5px solid  darkred;
+            border-right: 3px solid  darkred;
+            border-left: 3px solid darkred;
+            width: 100%;
+            text-align: center;
+            box-shadow: 4px 4px 5px #888888;
+            font-size: 3em;
+            margin: 0px;
+            color:whitesmoke;
+          }
+    
+          .buttonid{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 500px;
+            height: 50px;
+            background-color:tomato;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: #888888;
+            cursor: pointer;
+            color: whitesmoke;
+            border-radius: 8px;
+            font-size: 20px;
+            display: inline-block;
+          }
+          body{
+            background-image: url('food_1.jpg');
+            background-attachment: fixed;
+          }
+
+          #tid{
+            margin-right: 100px;
+          }
+      </style>
+  
+</head>
+<body>
+  <header>
+  </header>
+    <h1 id="websitetitle">MEAL MANAGER</h1>
+    <div>
+        <table id='tid'>
+          <tr>
+           <td> <form name="customerregistration" id="customerregistration" method="get" action="/customerregistration">
+                <button class = "buttonid">Customer Registration</button></td>
+            </form>
+          <td> <form name="customerlogin" id="customerlogin" method="get" action="/customerlogin">
+                <button class = "buttonid">Customer Login</button></td> 
+            </form>
+          </tr>
+          <tr>
+          <td> <form name="dieticianlogin" id="dieticianlogin" method="get" action="/dieticianlogin">
+                <button class = "buttonid">Dietician Login</button></td> 
+            </form>
+           <td> <form name="restaurantlogin" id="restaurantlogin" method="get" action="/restaurantlogin">
+                <button class = "buttonid">Restaurant Login</button></td>
+            </form>
+
+          </tr>
+<tr> <td><form name="contactform" id="contactform" method="get" action="/contactform">
+    <button class = "buttonid">Contact Form</button></td><td></td>
+        </table>
+    </div>
+
+            </form>
+</body>
+</html>

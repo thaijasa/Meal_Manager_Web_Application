@@ -1,0 +1,110 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <% include head %>
+
+
+    <% include css/restaurant_format %>
+
+    <script type="text/javascript">
+        function validate() {
+            item_name = document.getElementById("item_name").value;
+
+            calories = document.getElementById("calories").value;
+            proteins = document.getElementById("proteins").value;
+
+            carbohydrates = document.getElementById("carbohydrates").value;
+            fat = document.getElementById("fat").value;
+            errors = "";
+            if (item_name == "") {
+                errors += "Missing Item Name.\n";
+            }
+            if (calories == "") {
+                errors += "Missing Calories.\n";
+            }
+            if (proteins == "") {
+                errors += "Missing Proteins.\n";
+            }
+            if (carbohydrates == "") {
+                errors += "Missing Carbohydrates.\n";
+            }
+
+            if (fat == "") {
+                errors += "Missing Fat.\n";
+            }
+            if (errors != "") {
+                alert(errors);
+            }
+            else {
+                document.r_addmenuitemsform.submit();
+
+            }
+
+        }
+
+
+
+    </script>
+
+
+</head>
+<header>
+    <% include restaurant_loggedin_header %>
+
+</header>
+
+<body>
+
+
+    <div class="restaurant_form_display">
+        <h2>Add Items To Menu</h2>
+
+        <form name="r_addmenuitemsform" id="r_addmenuitemsform" method="post" action="/r_add_menu_items">
+            <fieldset>
+                <label for="item_name">ItemName*:</label>
+                <input id="item_name" name="item_name" type="text" class="required">
+                <label for="mealtype">MealType*:</label>
+                <label for="breakfast">Breakfast</label>
+                <input id="mealtype" name="mealtype" type="radio" value="Breakfast" id="breakfast" checked>
+                <label for="Lunch"> Lunch</label>
+                <input id="mealtype" name="mealtype" type="radio" value="Lunch" id="lunch">
+                <label for="Dinner"> Dinner</label>
+                <input id="mealtype" name="mealtype" type="radio" value="Dinner" id="dinner">
+                <label for="calories">Calories*:</label>
+                <input id="calories" name="calories" type="number" step="any" class="required">
+                <label for="proteins">Proteins*:</label>
+                <input id="proteins" name="proteins" type="number" step="any" class="required">
+                <label for="carbohydrates">Carbohydrates*:</label>
+                <input id="carbohydrates" name="carbohydrates" type="number" step="any" class="required">
+                <label for="fat">Fat*:</label>
+                <input id="fat" name=fat type="number" step="any" class="required">
+                <label for="days_of_week">DaysOfWeek*:</label>
+                <label for="Monday">Monday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Monday" id="monday">
+                <label for="Tuesday">Tuesday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Tuesday" id="tuesday">
+                <label for="Wednesday">Wednesday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Wednesday" id="wednesday">
+                <label for="Thursday">Thursday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Thursday" id="thursday">
+                <label for="Friday">Friday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Friday" id="friday">
+                <label for="Saturday">Saturday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Saturday" id="saturday">
+                <label for="Sunday">Sunday</label>
+                <input id="days_of_week" name="days_of_week" type="checkbox" value="Sunday" id="sunday">
+            </fieldset>
+
+                <p> <button type="button" onclick="validate()">Add Item</button>
+                </p>
+
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<html>
+    <head>
+        <% include head %>
+        <% include css/common_css %>
+        <% include css/admin_css %>
+        <script type="text/javascript">
+            function validate()
+            {
+                dieticianname  = document.getElementById("dieticianname").value;
+                pwd = document.getElementById("pwd").value;
+                emailid = document.getElementById("emailid").value;
+                experience = document.getElementById("experience").value;
+                qualification = document.getElementById("qualification").value;
+               
+                errors = "";
+        
+                if (dieticianname == "") {
+                    errors += "Missing Name of the Dietician.\n";
+                } 
+                if (pwd == "") {
+                    errors += "Missing password.\n";
+                } 
+                if (emailid == "") {
+                    errors += "Missing Email ID of the Dietician.\n";
+                } 
+                if (experience == "") {
+                    errors += "Missing Years of Experience.\n";
+                } 
+                if (qualification == "") {
+                    errors += "Missing qualification.\n";
+                } 
+              
+        
+                if (errors != "") {
+                  alert(errors);
+                }
+                else
+                {
+                    document.registerdietician.submit();
+                }  
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <% include header_adminhome %>
+        </header>
+        <div id='id4'>
+            <center> <h1 id='id3'>Register Dietician</h1></center><br>
+                <form name="registerdietician" id="registerdietician" method="post" action="/regdietsuccesful">
+             <center>
+           
+            <p>
+                <label for="dieticianname">Name: </label> 
+                <input id="dieticianname" name="dieticianname" type="text"  class="required"  title="dieticianname">
+            </p>
+            <p>
+                <label for="emailid">Email_ID: </label> 
+                <input id="emailid" name="emailid" type="text"  class="required"  title="emailid">
+            </p>
+            <p>
+                    <label for="pwd">Password: </label> 
+                    <input id="pwd" name="pwd" type="password"  class="required"  title="pwd">
+            </p>
+            <p>
+                    <label for="experience">Experience(Years)</label> 
+                    <input id="experience" name="experience" type="text"  class="required"  title="experience">
+            </p>
+            <p>
+                    <label for="qualification">Qualification: </label> 
+                    <input id="qualification" name="qualification" type="text"  class="required"  title="qualification">
+            </p>
+
+            <p>
+                 <b>   <button type="button"  onclick="validate()" id='buttonid'> SUBMIT </button></b>
+            </p>
+        </div>
+      </center>
+        </form>
+    </body>
+</html>

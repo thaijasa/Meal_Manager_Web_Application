@@ -1,0 +1,58 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/dietician_format %>
+    
+</head>
+
+<body>
+<header>
+    <% include dietician_loggedin_header %>
+</header>
+
+
+<div class="dietician_main_display">
+	<h2>Update Diet Plan Requests</h2> 
+	<% if (update_diet_plan_requests=='Y' ) { %>
+		<form name="updatedietplanrequests" id="updatedietplanrequests" method="POST" action="/d_update_diet_plan_details">
+			<table id="dietician_view_table">
+   						<tr>
+   					 		<th> &nbsp;&nbsp; SelectCustomer &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; CustomerId &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; CustomerName &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; DietPlanStartDate &nbsp;&nbsp;</th> 
+							 <th> &nbsp;&nbsp; DietPlanUpdateStartDate &nbsp;&nbsp;</th>
+							 <th> &nbsp;&nbsp; RequestContent &nbsp;&nbsp;</th>
+
+                		</tr>							
+                    	<% for(var i=0; i < query_results.length; i++) { %>
+                    		<tr>
+                        		<td><input type="radio" name="custid_dietstartdate" checked value= <%=  query_results[i].custid_dietstartdate %> > </td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].cust_id %> &nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].cust_name %> &nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].diet_start_date.toDateString()  %>&nbsp;&nbsp;</td>
+								 <td>&nbsp;&nbsp; <%=  query_results[i].diet_plan_update_start_date.toDateString()  %> &nbsp;&nbsp;</td>
+								 <td>&nbsp;&nbsp; <%=  query_results[i].request_content %> &nbsp;&nbsp;</td>
+
+                           </tr>
+                    	<% } %>  
+               
+             </table> 
+					<button type="submit" class="submit_form_button"  formaction="/d_update_diet_plan_details">Update Diet Plan</button>
+          </form>                        
+<% } %>
+<%  if (update_diet_plan_requests=='N' ) { %>
+    	<div class="no_data_information_message">
+        	<p>  No update diet plan requests! </p>
+    	</div>
+<% } %>
+</div>
+
+            
+</body>
+</html>

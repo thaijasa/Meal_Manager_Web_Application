@@ -1,0 +1,52 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+ <% include css/common_css %>
+<% include css/admin_css %>   
+<% include css/dietician_format %>
+
+    
+
+    
+
+</head>
+<header>
+    
+</header>
+<body>
+<% if(msg=='Y'){ %>
+    <table id="dietician_view_table">
+            <form name="contactmsgview" id="contactmsgview" method="POST" action="contactidallmessages">
+
+    <tr>
+            <th> &nbsp;&nbsp; Select ContactId &nbsp;&nbsp;</th> 
+
+        <th> &nbsp;&nbsp; ContactId &nbsp;&nbsp;</th> 
+     <th> &nbsp;&nbsp; LastContactTime &nbsp;&nbsp;</th> 
+
+</tr>
+    <% for(var i=0; i < infomessage.length; i++) { %>
+   
+        <tr>
+                <td><input type="radio" name="contactid" value= <%=  infomessage[i].name  %> checked> </td>
+
+            <td> &nbsp;&nbsp; <%= infomessage[i].name  %>  &nbsp;&nbsp;</td> 
+         <td> &nbsp;&nbsp; <%=  infomessage[i].update_timestamp  %>  &nbsp;&nbsp;</td> 
+    
+    </tr>
+  
+<% } %>
+</table>
+<button type="submit" class="submit_form_button" >View Message</button>
+
+<% } else { %>
+
+No messages
+    <% }  %>
+
+</body>
+</html>

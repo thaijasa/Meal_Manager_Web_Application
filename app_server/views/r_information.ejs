@@ -1,0 +1,64 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/restaurant_format %>
+    
+ <script type="text/javascript">
+        function validate()
+        {
+            item_name  = document.getElementById("item_name").value;
+
+            calories  = document.getElementById("calories").value;
+           proteins=document.getElementById("proteins").value;
+
+            carbohydrates=document.getElementById("carbohydrates").value;
+           fat=document.getElementById("fat").value;
+           errors=""
+             if (item_name == "") {
+                errors += "Missing Item Name.\n";
+            } 
+             if (calories == "") {
+                 errors += "Missing Calories.\n";
+             } 
+             if (proteins == "") {
+                 errors += "Missing Proteins.\n";
+             } 
+             if (carbohydrates == "") {
+                errors += "Missing Carbohydrates.\n";
+            } 
+
+             if (fat == "") {
+                errors += "Missing Fat.\n";
+            } 
+            if (errors != "") {
+              alert(errors);
+            }
+            else{
+                document.r_addmenuitemsform.submit();
+
+            }
+           
+        }
+      
+        
+        
+    </script>  
+    
+
+</head>
+<header>
+    <% include restaurant_loggedin_header %>
+    
+</header>
+<body>
+
+<div class = "restaurant_information_message">
+<%= message %>
+								 	
+</div>			
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+<header>
+        <% include customerheader %>
+</header>
+<% if (items_present=='Y' ) { %>
+    
+<div class="heading_style">
+    <h1>Order History</h1> 
+</div>
+    <div class="view_table">
+            
+            <div id="view_table_tableid">
+                <table>
+                    <tr>   
+                            <th> &nbsp;&nbsp; Ordered Date &nbsp;&nbsp;</th>
+                            <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th>  
+                            <th> &nbsp;&nbsp; Restaurant Name &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Item Name &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Day of Week &nbsp;&nbsp;</th>
+                            <th> &nbsp;&nbsp; Pick Up Time &nbsp;&nbsp;</th> 
+                            
+                        </tr>							
+                       
+                           <% for(var i=0; i < query_results.length; i++) { %>
+                           <tr>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].order_date.toDateString() %> &nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].name %>&nbsp;&nbsp;</td>
+                               <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                               <td>&nbsp;&nbsp; <%=  query_results[i].day_of_week %>&nbsp;&nbsp;</td>
+                               <td>&nbsp;&nbsp; <%=  query_results[i].pickup_time %>&nbsp;&nbsp;</td>
+                               
+                        </tr>
+                        <% } %>  
+                                                
+            </div>
+        </div>
+    
+       
+    
+    <% } %>
+    <% if (items_present=='N' ) { %>
+        <div class="information_message">
+                <h2>  Sorry....You don't have any order history.</h2> 
+        </div>
+    <% } %>
+    
+                
+    </body>
+    </html>
+
+
+
+            
+</body>
+</html>

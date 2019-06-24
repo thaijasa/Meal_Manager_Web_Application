@@ -1,0 +1,63 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+    <% include css/common_css %>
+    <% include css/admin_css %>
+    
+    <script type="text/javascript">
+        function validate()
+        {
+            userid  = document.getElementById("userid").value;
+            pwd = document.getElementById("pwd").value;
+           
+            errors = "";
+    
+            if (userid == "") {
+                errors += "Missing userid.\n";
+            } 
+            if (pwd == "") {
+                errors += "Missing password.\n";
+            } 
+          
+    
+            if (errors != "") {
+              alert(errors);
+            }
+            else{
+                document.adminlogin.submit();
+
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <% include header_admin %>
+</header>
+     <form name="adminlogin" id="adminlogin" method="post" action="/adminhome">
+        <div id = 'id5'>
+		
+               <center> <h1 id='id3'>Admin Login</h1></center><br>
+			
+            <center>
+                <label for="userid">Email_ID:</label>
+                 <input id="userid" name="userid" type="text"  class="required"  title="USERID">
+			</p>
+            
+            <p>
+                <label for="pwd">Password:</label>
+                <input id="pwd" name="pwd" type="password" class="required" title="pwd">
+			</p><br><br>
+            
+            <p>
+			<center><b>	<button type="button"  onclick="validate()" id ='buttonid'> Submit</button></b></center>
+            </p>
+            </p>
+    </div>
+</center>
+	</form>
+</body>
+</html>

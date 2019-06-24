@@ -1,0 +1,43 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/restaurant_format %>
+    
+
+    
+
+</head>
+<header>
+    <% include restaurant_loggedin_header %>
+    
+</header>
+<body>
+ <div class="restaurant_page_info">
+ 
+
+<p><h4>Email: <%= restaurant_email_id %> </h4></p>
+</div>
+
+
+<div class="centered_div">
+
+    <form name="restaurantlogin" id="restaurantlogin" method="get" action="/restauranthome">
+		<table class="home-table">
+		
+		
+			<tr>	<td><button type="submit" class="button_home" formaction="/r_view_menu">View Menu</button></td> </tr>
+						<tr><td>    <button type="submit" class="button_home"  formaction="/r_add_menu_items_form">Add Menu</button> </td> </tr>
+						<tr><td>	<button type="submit" class="button_home"  formaction="/r_update_menu">Update/Delete Menu</button> </td> </tr>
+						<tr><td>	<button type="submit"  class="button_home" formaction="/r_view_todays_orders">View Today's Orders</button> </td> </tr>
+						<tr><td>	<button type="submit"  class="button_home" formaction="/r_view_tomos_orders">View Tomorrow's Orders</button> </td> </tr>
+						<tr><td>	<button type="submit"  class="button_home" formaction="/r_view_report">View Report</button> </td> </tr>
+			
+			</table>
+	</form>
+     </div>       
+</body>
+</html>

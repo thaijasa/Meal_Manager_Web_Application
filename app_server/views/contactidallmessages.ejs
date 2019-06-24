@@ -1,0 +1,48 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+        <% include css/common_css %>
+        <% include css/admin_css %>   
+    <% include css/dietician_format %>
+
+    
+
+    
+
+</head>
+<header>
+    
+</header>
+<body>
+      <p>ContactId:  &nbsp;&nbsp; <%= infomessage[0].name  %>  &nbsp;&nbsp;</p>
+
+<% if(msg=='Y'){ %>
+    <table id="dietician_view_table">
+
+    <tr>
+
+        <th> &nbsp;&nbsp; Message &nbsp;&nbsp;</th> 
+     <th> &nbsp;&nbsp; MessageTime &nbsp;&nbsp;</th> 
+
+</tr>
+    <% for(var i=0; i < infomessage[0].message.length; i++) { %>
+   
+        <tr>
+
+            <td> &nbsp;&nbsp; <%= infomessage[0].message[i][0]  %>  &nbsp;&nbsp;</td> 
+         <td> &nbsp;&nbsp;  <%= infomessage[0].message[i][1]  %> &nbsp;&nbsp;</td> 
+    
+    </tr>
+  
+<% } %>
+</table>
+
+<% } else { %>
+
+No messages
+    <% }  %>
+
+</body>
+</html>

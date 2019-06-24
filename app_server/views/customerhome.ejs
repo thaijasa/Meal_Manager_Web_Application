@@ -1,0 +1,46 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+    
+     <% include css/customer_format %>
+   
+</style>
+</head>
+
+<body>
+<header>
+    <% include customerheader %>
+</header>
+
+<h4>Email: <%= customer_email %> </h4> 
+
+<div class="heading_style">
+	
+         <h1> Welcome </h1>
+
+</div>
+
+
+<div class="centered_div">
+
+    <form name="customerhome" id="customerhome" method="get" action="/customerhome">
+		<fieldset>
+		<table class="custhome-table">
+		
+		
+						<tr><td>    <button type="submit" class="button" formaction="/checkmenu">Tomorrow's Menu</button></td> </tr>
+						<tr><td>    <button type="submit" class="button"  formaction="/vieworderhistory">Order History</button> </td> </tr>
+						<tr><td>	<button type="submit" class="button"  formaction="/viewdietplan">Current Diet Plan</button> </td> </tr>
+                        <tr><td>    <button type="submit" class="button" formaction="/viewdietprogress">Current Diet Progress</button></td> </tr>
+						<tr><td>    <button type="submit" class="button"  formaction="/viewdiethistory">Diet History</button> </td> </tr>
+						<tr><td>	<button type="submit" class="button"  formaction="/itemrating">Rate an Item</button> </td> </tr>
+                        <tr><td>	<button type="submit" class="button"  formaction="/dieticianrating">Rate a Dietician</button> </td> </tr>
+			</table>
+		</fieldset>
+	</form>
+     </div>  
+</body>
+</html>

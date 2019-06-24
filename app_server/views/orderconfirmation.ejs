@@ -1,0 +1,46 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<head>
+        <% include head %>
+       
+        
+         <% include css/customer_format %>
+        
+    </head>
+
+  <body>
+        <header>
+            <% include customerheader %>
+            </header>
+
+    <% if (bf_chk == 1 ) { %>
+      <div class="information_message">
+      <h3> Sorry..... You already placed an order for your Breakfast Tomorrow</h3>
+    </div>
+      <% } %> 
+
+      <% if (ln_chk == 1 ) { %>
+        <div class="information_message">
+        <h3> Sorry..... You already placed an order for your Lunch Tomorrow</h3>
+      </div>
+        <% } %> 
+
+        <% if (din_chk == 1 ) { %>
+          <div class="information_message">
+          <h3> Sorry..... You already placed an order for your Dinner Tomorrow</h3>
+        </div>
+          <% } %> 
+         
+          <% if (din_chk == 0 && ln_chk == 0 && bf_chk == 0 ){ %>
+            <div class="information_message">
+                <h3> Order Placed Succesfully..... </h3>
+                </div>
+            <% } %> 
+
+
+    
+
+  </body>
+  
+
+</html>

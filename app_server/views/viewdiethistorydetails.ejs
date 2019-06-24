@@ -1,0 +1,62 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+        <header>
+                <% include customerheader %>
+            </header>
+<% if (items_present=='Y' ) { %>
+    
+    <div class="heading_style">
+            <h1>Diet Plan Complete Details</h1> </div>
+
+            <div class="view_hist_table">
+            
+                    <div id="view_table_tableid">
+            <table>
+                <tr>   
+                     <th> &nbsp;&nbsp; Day &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th>
+                     <th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Followed &nbsp;&nbsp;</th>
+                     <th> &nbsp;&nbsp; Additional Intake &nbsp;&nbsp;</th> 
+                 </tr>							
+                
+                    <% for(var i=0; i < query_results.length; i++) { %>
+                    <tr>
+                        <!-- <td> <input type="radio" name="customer_dietician_startdate_ID" value= <%=  query_results[i].customer_dietician_startdate_ID %> > </td> -->
+                        <td>&nbsp;&nbsp; <%=  query_results[i].day %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].calories %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].proteins %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].fat %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].followed %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].additional_intake %>&nbsp;&nbsp;</td>
+                    </tr>
+                    <% } %>  
+                                            
+        </div>
+    </div>
+
+<% } %>
+<% if (items_present=='N' ) { %>
+    <div class="information_message">
+            <h2>  Sorry.....You dont have any previous Dietplan History </h2> 
+    </div>
+<% } %>
+
+            
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+    <% include css/common_css %>
+    <% include css/dieticianYesNo_css %>
+    
+    <script type="text/javascript">
+        
+        function chngedtefrmt(date)
+        {
+             var d = new Date(date),
+             m = '' + (d.getMonth() + 1),
+             dy = '' + d.getDate(),
+             y = d.getFullYear();
+
+            if (m.length < 2) m = '0' + m;
+            if (dy.length < 2) {
+                // console.log("dy: ", dy);
+                d = '0' + dy;
+                // console.log("d: ", d);
+            }
+
+            op = [y, m, d].join('-');
+            return op
+        }
+
+        function addDays(days)
+        {
+            var result = new Date();
+            result.setDate(result.getDate() + days);
+            return result;
+        }
+
+        function validate()
+        {
+            cardnumb  = document.getElementById("cardnumb").value;
+            cardtype = document.getElementById("cardtype").value;
+            cvv = document.getElementById("cvv").value;
+            expdate = document.getElementById("expdate").value;
+            msmtdate  = document.getElementById("msmtdate").value;
+            actlvl = document.getElementById("actlvl").value;
+            weight = document.getElementById("weight").value;
+            sleep = document.getElementById("sleep").value;
+            height = document.getElementById("height").value;
+            dietcianselection = document.getElementsByName("dietician_id").value;
+            startdate = document.getElementById("startdate").value;
+
+            errors = "";
+    
+            if (cardnumb == "") {
+                errors += "Missing Card Number.\n";
+            } 
+            if (cardtype == "") {
+                errors += "Missing Card Type.\n";
+            } 
+            if (cvv == "") {
+                errors += "Missing CVV.\n";
+            } 
+            if (expdate == "") {
+                errors += "Missing Expiry Date.\n";
+            }        
+            
+            if (msmtdate == "") {
+                errors += "Missing Measurment Date.\n";
+            } 
+            if (actlvl == "") {
+                errors += "Missing Activity Level.\n";
+            } 
+            if (weight == "") {
+                errors += "Missing Weight.\n";
+            } 
+            if (sleep == "") {
+                errors += "Missing Number of hours of Sleep.\n";
+            } 
+            if (height == "") {
+                errors += "Missing Height.\n";
+            } 
+            if (dietcianselection == "") {
+                errors += "Select a dietician from the list.\n";
+            }       
+            if (startdate == "") {
+                errors += "Missing Start Date.\n";
+            }
+            // if (dietcianselection == null){
+            //     errors += "Please select a dietician from the list.\n";
+            // }
+    // check for dates
+            
+            resDte = addDays(2) 
+            console.log("resDte", resDte);
+            fnlDte = chngedtefrmt (resDte)
+            
+            var currDte = new Date();
+            currDte = chngedtefrmt(currDte)
+
+            if (startdate <= fnlDte) {
+                console.log("startdate:", startdate);
+                console.log("fnlDte:", fnlDte);
+                errors += "Select a Start Date greater than two days from today.\n";
+            }
+
+            if (msmtdate > currDte){
+                errors += "Select a Past Measurement Date.\n";
+            }
+            if (expdate <= currDte) {
+                errors += "Your card expiry date is a past date. Please use a different card.\n";
+            }
+
+            if (errors != "") {
+              alert(errors);
+            }
+
+            else
+            {
+                document.dieticianyes.submit();
+            }  
+        }             
+    </script>
+</head>
+
+<body>
+    <header>
+        <% include header_dieticianOption %>
+    </header>
+    <form id="dieticianyes" name="dieticianyes" method="post" action="/yespaymentsuccessful">
+       
+        <h3 id ='welcome' ><center>Enter below lifestyle related details </center></h3>
+        <div id ='id1'>
+        
+                
+                    <p>
+                            <label for="weight">Weight:</label>
+                            <input id="weight" name="weight" type="text" class="required" title="weight">
+                            <button>lbs</button>
+                    </p>
+                    <p>
+                            <label for="height">Height:</label>
+                            <input id="height" name="height" type="text" class="required" title="height">
+                            <button>cms</button>
+                    </p>
+
+                    <p>
+                        <label for="msmtdate">Measurement date of height and weight:</label> 
+                        <input id="msmtdate" name="msmtdate" type="date"  class="required"  title="msmtdate" >
+                </p>
+
+                <p>
+                    <label><b>Activity Level:</b></label>
+                        <select name="actlvl" id = 'actlvl'>
+                            <option value="high"  selected>I will have HIGH level of physical exercise everday</option>
+                            <option value="medium"> I have INTERMEDIATE level of physical exercise everyday </option>
+                            <option value="low"> I have NO/LOW level of physical exercise everyday </option>
+                        </select>
+                </p>
+                    <p>
+                            <label><b>Sleep: </b></label>
+                            <select name="sleep" id = 'sleep'>
+                                
+                                <option value="0"> 4 - 5 </option>
+                                <option value="1" selected> 6 - 8 </option>
+                                <option value="2"> 8 - 10 </option>
+                            </select>
+                            <button>hrs</button>
+                    </p>
+                    <p>
+                            <label><b>Select the diseases that you are diagnosed with:</b></label>
+                            <div id ="diseaseid">
+                            <input type="checkbox" name="disease1" value="Diabetes">Diabetes<br>
+                            <input type="checkbox" name="disease2" value="HBP">High Blood Pressure<br>
+                            <input type="checkbox" name="disease3" value="LBP">Low Blood Pressure<br>
+                            <input type="checkbox" name="disease4" value="HC">High Cholestrol<br>
+                            <input type="checkbox" name="disease5" value="LC">Low Cholestrol<br>
+                            </div>
+                    </p>
+
+                    <p>
+                            <label><b>Select the ones that you are allergic to:</b></label>
+                            <div id ="diseaseid">
+                            <input type="checkbox" name="allergy1" value="Peanuts">Peanuts<br>
+                            <input type="checkbox" name="allergy2" value="Polen">Polen<br>
+                            <input type="checkbox" name="allergy3" value="Lactose">Lactose<br>
+                            <input type="checkbox" name="allergy4" value="Soy">Soy<br>
+                            <input type="checkbox" name="allergy5" value="Mold">Mold<br>
+                            </div>
+                    </p>
+
+                    <!-- <p>
+                        <div id ='stdt'>
+                            <label for="startdate" class="hover">Select start date for meal plan</label>
+                            <p class="text">Date should be greater than two days from today</p>
+                        </div>  
+                            <input id="startdate" name="startdate" type="date" class="required" title="startdate" ><br>
+
+                    </p> -->
+
+                    <p>
+                        <label for="startdate" class="hover">Select start date for meal plan (date > than 2 days)</label>
+                        <input id="startdate" name="startdate" type="date" class="required" title="startdate" ><br>
+                    </p>
+                </div>   
+                <br><br>
+
+    <div>
+            <h3 id ='welcome' ><center>Select A Dietician</center></h3>
+            <h4 id ="subheader">Please select a dietican from the below list:</h4>
+            <div>
+              <center>
+            <table id ='d_view_table'>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp; Name of the Dietician &nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp; Email_ID &nbsp;&nbsp;</th>
+                            <th> &nbsp;&nbsp; Experience &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Qualification &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Rating &nbsp;&nbsp;</th> 
+                        </tr>
+                    <% for(var i=0; i < query_results.length; i++) { %>
+                                            
+                            <tr>
+                                <td> <input type="radio" name="dietician_id" id= 'did'value= <%=  query_results[i].dietician_id %> > </td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].dietician_name %>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].email_id %> &nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].experience %>&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].qualification %>&nbsp;&nbsp; </td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].ratings %>&nbsp;&nbsp; </td>
+                            </tr>
+                                        
+                    <% } %>             
+            </table>
+        </center>      
+            </div>
+    </div>
+    <br><br>
+
+    <div>
+        <h3 id ='welcome'><center>Payment Details</center></h3>
+        <div id = "id1">
+       
+        
+                <p>
+                <label for="cardnumb">Enter your card number:</label> 
+                <input id="cardnumb" name="cardnumb" type="text" class="required" title="cardnumb" placeholder="1111222233334444">
+                </p>
+                
+                <p>
+                <label>Select type of card:</label>
+                <select id='cardtype' name = 'cardtype'>
+                    <option value='creditcard'> Credit Card</option>
+                    <option value="debitcard">Debit Card</option>
+                    <option value="visa">Visa</option>
+                </select>
+                </p>
+                
+                <p>
+                <label for="cvv">CVV:</label>
+                <input id="cvv" name="cvv" type="text" class="required" title="cvv" placeholder="301">
+                </p>
+                
+                <p>
+                <label for="expdate">Expiry Date:</label> 
+                <input id="expdate" name="expdate" type="date" class="required" title="expdate" >
+                </p>     
+        </div>        
+
+    </div>
+    <br><br>
+
+
+
+    <p>
+       <center><b><button type="button"  onclick="validate()" id="buttonid"> SUBMIT </button></b></center>
+    </p>
+  <br><br>
+
+    </form>
+    </body>
+    </html>

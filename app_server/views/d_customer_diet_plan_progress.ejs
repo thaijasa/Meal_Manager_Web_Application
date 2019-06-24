@@ -1,0 +1,80 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head><% include head %> <% include css/dietician_format %>
+
+</head>
+
+<body>
+	<header> <% include dietician_loggedin_header %> </header>
+	
+	<div class="id_email_style">
+            	<p>CustID:<%= cust_details[0].cust_id %>&nbsp;&nbsp;
+            	 CustName:<%=cust_details[0].cust_name%>&nbsp;&nbsp;
+            	 CustEmailID:<%=cust_details[0].email_id%>&nbsp;&nbsp;
+
+            	  </p>
+	</div>
+
+	<h2>Customer Diet Plan & Progress Details</h2> 
+
+	<% if (diet_plan_progress_present=='Y' ) { %>
+
+	<div id="tableid">
+		<table id="dietician_view_table">
+			<tr>
+
+				<th>&nbsp;&nbsp; CalendarDate &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; meal_type &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; calories &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; proteins &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; carbohydrates &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; fat &nbsp;&nbsp;</th>
+
+				<th>&nbsp;&nbsp; diet_followed &nbsp;&nbsp;</th>
+				<th>&nbsp;&nbsp; additional_intake &nbsp;&nbsp;</th>
+
+
+			</tr>
+				
+
+			<% for(var i=0; i < query_results.length; i++) { %>
+
+			<tr>
+				<% if(query_results[i].meal_type=='Breakfast'){ %>
+				<td rowspan=3>&nbsp;&nbsp; <%=
+					query_results[i].calendar_date.toDateString() %>&nbsp;&nbsp;</td> <% }
+				%>
+
+				<td>&nbsp;&nbsp; <%= query_results[i].meal_type %>&nbsp;&nbsp;</td>
+				<td>&nbsp;&nbsp; <%= query_results[i].calories %>&nbsp;&nbsp;</td>
+				<td>&nbsp;&nbsp; <%= query_results[i].proteins %>&nbsp;&nbsp;</td>
+
+				<td>&nbsp;&nbsp; <%= query_results[i].carbohydrates
+					%>&nbsp;&nbsp;</td>
+
+				<td>&nbsp;&nbsp; <%= query_results[i].fat %>&nbsp;&nbsp;</td>
+
+				<td>&nbsp;&nbsp; <%= query_results[i].diet_followed
+					%>&nbsp;&nbsp;</td> <% if(query_results[i].meal_type=='Breakfast'){ %>
+				<td rowspan=3>&nbsp;&nbsp; <%=
+					query_results[i].additional_intake %>&nbsp;&nbsp;</td> <% } %>
+
+
+			</tr>
+
+	<% } %>                             
+</table>
+</div>
+<% } %>
+
+<% if (diet_plan_progress_present=='N' ) { %>
+<div class="no_data_information_message">
+<p>  No diet plan available for the selected diet start date! </p>
+</div>
+<% } %>
+
+           
+</body>
+</html>

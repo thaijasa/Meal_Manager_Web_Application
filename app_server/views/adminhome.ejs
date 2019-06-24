@@ -1,0 +1,34 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<html>
+    <head>
+        <% include head %>
+        <% include css/common_css %>
+        <% include css/admin_css %>
+    </head>
+    
+    <body>
+        <header>
+            <% include header_adminhome %>
+        </header>
+                <div id='id2'>
+                    <p>
+                      <center><h1 id='id3'>ADMIN HOME</h1></center><br>
+                      <center> <h4>Select one of the tasks below</h4></center>
+                    </p>
+                    <center>
+                    <form name="adminhome" id="adminhome" method="get" action="/registerdietician">
+                        <button id ='btn1'> Register DIETICIAN</button>
+                    </form>
+                    <form name="adminhome" id="adminhome" method="get" action="/registerrestaurant">
+                        <button id ='btn1'>Register RESTAURANT</button>
+            
+                    </form>
+                       <form name="contactformdetails" id="contactformdetails" method="get" action="/get_contactform_message_names">
+                        <button id ='btn1'>Contact Messages</button>
+            
+                    </form>
+                    </center>
+                    </div>
+    </body>
+</html>

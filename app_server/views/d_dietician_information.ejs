@@ -1,0 +1,38 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/dietician_format %>
+    
+</head>
+
+<body>
+<header>
+    <% include dietician_loggedin_header %>
+</header>
+<div class="dietician_message_info">
+    <%=message%> 
+</div>
+<div class="dietician_page_info">
+	<p>CustID:<%= cust_details[0].cust_id %>&nbsp;&nbsp;
+		CustName:<%=cust_details[0].cust_name%>&nbsp;&nbsp;
+		CustEmailID:<%=cust_details[0].cust_email_id%>&nbsp;&nbsp;</p>
+		<p>CustAge:<%= cust_details[0].cust_age %>&nbsp;&nbsp;
+		   Height:<%=cust_details[0].height%>&nbsp;&nbsp;
+		   Weight:<%=cust_details[0].weight%>&nbsp;&nbsp;
+		   Sleep:<%=cust_details[0].sleep%> hrs&nbsp;&nbsp;
+		   ActivityLevel:<%=cust_details[0].activity_level%>&nbsp;&nbsp;</p>
+		 
+            
+            	 
+            	  
+</div>
+
+
+            
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+        <header>
+                <% include customerheader %>
+            </header>
+<% if (items_present=='Y' ) { %>
+    
+
+
+    <div class="heading_style">
+    <h1>Item Rating</h1> </div>
+
+</div>
+<div class="view_table">
+        
+        <div id="view_table_tableid">
+            <table>
+                <tr>   
+                        <th> &nbsp;&nbsp; Select Item &nbsp;&nbsp;</th>     
+                        <th> &nbsp;&nbsp; Ordered Date &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th>  
+                        <th> &nbsp;&nbsp; Restaurant Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Item Name &nbsp;&nbsp;</th> 
+                        <th> &nbsp;&nbsp; Day of Week &nbsp;&nbsp;</th>
+                        <th> &nbsp;&nbsp; Pick Up Time &nbsp;&nbsp;</th> 
+                        
+                    </tr>							
+
+                        <form name="itemrating" id="itemrating" method="POST" >
+                                <% for(var i=0; i < query_results.length; i++) { %>
+                       <tr>
+                            <% item_rest = query_results[i].restaurant_id +","+ query_results[i].item_name %>
+                            <td> <input type="radio" name="restaurant_item_id" value= "<%=  item_rest %>" > </td>
+                            <td>&nbsp;&nbsp; <%=  query_results[i].order_date.toDateString() %> &nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %>&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp; <%=  query_results[i].name %>&nbsp;&nbsp;</td>
+                           <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                           <td>&nbsp;&nbsp; <%=  query_results[i].day_of_week %>&nbsp;&nbsp;</td>
+                           <td>&nbsp;&nbsp; <%=  query_results[i].pickup_time %>&nbsp;&nbsp;</td>
+                           
+                    </tr>
+                    <% } %>  
+
+                    <p>
+                            Please provide the Rating:
+                            <select name="rating" id = 'rating'>
+                              <option value=1  selected> 1 </option> // Pre-selected
+                              <option value=2> 2 </option>
+                              <option value=3> 3 </option> 
+                              <option value=4> 4 </option>
+                              <option value=5> 5 </option>
+                            </select>
+                    
+                        </p>
+
+                    <button type="submit" class = "single_button_history" formaction="/itemratingconfirmation">Submit Rating</button>
+                </form> 
+                                            
+        </div>
+    </div>
+
+   
+    
+   
+
+<% } %>
+<% if (items_present=='N' ) { %>
+    <div class="information_message">
+            <h3>    Sorry....You dont have any order history. So you can't provide rating for an item. </h3>
+    </div>
+<% } %>
+
+            
+</body>
+</html>

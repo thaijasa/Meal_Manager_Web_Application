@@ -1,0 +1,89 @@
+
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+ 
+<!DOCTYPE html>
+<html lang="en-US">
+<head><% include head %> <% include css/dietician_format %>
+
+</head>
+
+<body>
+	<header> <% include dietician_loggedin_header %> </header>
+	<div class="dietician_message_info">
+		<%= message%> 
+	</div>
+	<div class="dietician_page_info">
+
+		<p>CustID:<%= cust_details[0].cust_id %>&nbsp;&nbsp;
+			CustName:<%=cust_details[0].cust_name%>&nbsp;&nbsp;
+			CustEmailID:<%=cust_details[0].cust_email_id%>&nbsp;&nbsp;</p>
+			<p>CustAge:<%= cust_details[0].cust_age %>&nbsp;&nbsp;
+			   Height:<%=cust_details[0].height%>&nbsp;&nbsp;
+			   Weight:<%=cust_details[0].weight%>&nbsp;&nbsp;
+			   Sleep:<%=cust_details[0].sleep%> hrs&nbsp;&nbsp;
+			   ActivityLevel:<%=cust_details[0].activity_level%>&nbsp;&nbsp;</p>
+			   <p>
+					<% for(var i=0; i < cust_health_details.length; i++) {   %> 
+						<%= cust_health_details[i].a_d_type %>:<%= cust_health_details[i].allergy_disease %>&nbsp;&nbsp;
+				<% }   %> 
+				</p>		 
+	</div>
+
+	<div class="dietician_main_display">
+		<h2>Diet Plan Details</h2>
+		<form name="updatedietplanrequests" id="updatedietplanrequests"
+			method="POST" action="/d_update_diet_plan_details_form">
+			<table id="dietician_view_table">
+				<tr>
+					<th>&nbsp;&nbsp; SelectDay &nbsp;&nbsp;</th>
+
+					<th>&nbsp;&nbsp; Day &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; CalendarDate &nbsp;&nbsp;</th>
+
+					<th>&nbsp;&nbsp; MealType &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Calories &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Proteins &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th>
+					<th>&nbsp;&nbsp; Fat &nbsp;&nbsp;</th>
+
+
+				</tr>
+				<% for(var i=0; i < query_results.length; i++) { %>
+				<tr>
+				  <% if(query_results[i].meal_type=='Breakfast'){ %>
+				
+				
+					<td rowspan=3>&nbsp;&nbsp;<input type="radio" name="diet_day"
+						value=<%= query_results[i].day %> checked>&nbsp;&nbsp;
+					</td>
+
+					<td rowspan=3>&nbsp;&nbsp; <%= query_results[i].day %>
+						&nbsp;&nbsp;</td>
+					<td rowspan=3>&nbsp;&nbsp; <%=
+						query_results[i].calendar_date.toDateString() %> &nbsp;&nbsp;</td>
+<% } %>
+
+
+					<td>&nbsp;&nbsp; <%= query_results[i].meal_type %>
+						&nbsp;&nbsp;</td>
+					<td>&nbsp;&nbsp; <%= query_results[i].calories %>&nbsp;&nbsp;</td>
+					<td>&nbsp;&nbsp; <%= query_results[i].proteins %> &nbsp;&nbsp;</td>
+					<td>&nbsp;&nbsp; <%= query_results[i].carbohydrates %>
+						&nbsp;&nbsp;</td>
+					<td>&nbsp;&nbsp; <%= query_results[i].fat %> &nbsp;&nbsp;</td>
+
+
+				</tr>
+				<% } %>
+
+			</table>
+			<button type="submit" class="submit_form_button" formaction="/d_update_diet_plan_details_form">Update Diet Plan</button>
+				<button type="submit" class="submit_form_button"  formaction="/d_finalize_update_diet_plan">Finalize Diet Plan</button>
+
+		</form>
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,884 @@
+[2019-05-05T18:54:37.790] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-05T18:54:57.583] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-05T18:54:57.682] [INFO] default - Calling DB to insert customer details
+[2019-05-05T18:54:57.707] [INFO] default - Inserted to DB customer registration details for customeremail: cust12
+[2019-05-05T18:55:02.242] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T18:55:02.246] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T18:55:02.256] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:cust12
+[2019-05-05T18:55:03.516] [INFO] default - Calling MySQL DB to list all the dieticians enrolled  for customer ID: 50000
+[2019-05-05T18:55:03.516] [INFO] default - Request received for c_d_dieticianYes for customer_ID: 50000
+[2019-05-05T18:55:03.551] [INFO] default - Successfully listed list of enrolled dieticians for customer ID: 50000
+[2019-05-05T18:55:42.636] [INFO] default - Received request to d_yes_details for CUSTOMER ID: 50000
+[2019-05-05T18:55:42.636] [INFO] default - Calling MySQL DB to insert additional details of customer enrolled with a dietician for customer ID: 50000
+[2019-05-05T18:55:42.651] [INFO] default - Successfully inserted customer enrolled dietician details to DB for customer ID: 50000
+[2019-05-05T18:55:44.574] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T18:55:48.055] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T18:55:48.056] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T18:55:48.067] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:cust12
+[2019-05-05T18:55:50.991] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T18:55:56.698] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T18:55:58.246] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T18:56:01.940] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-05T18:56:20.847] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-05T18:56:20.848] [INFO] default - Calling DB to insert customer details
+[2019-05-05T18:56:20.853] [ERROR] default - EmailID already existscust12
+[2019-05-05T18:56:30.091] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-05T18:56:30.091] [INFO] default - Calling DB to insert customer details
+[2019-05-05T18:56:30.098] [INFO] default - Inserted to DB customer registration details for customeremail: cust13
+[2019-05-05T18:56:32.892] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T18:56:32.892] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T18:56:32.901] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:cust13
+[2019-05-05T18:56:34.218] [INFO] default - Calling MySQL DB to list available mealplans for customer ID: 50001
+[2019-05-05T18:56:34.218] [INFO] default - Request received for c_d_dieticianNo for customer_ID: 50001
+[2019-05-05T18:56:34.223] [INFO] default - Successfully listed list of mealplans for customer ID: 50001
+[2019-05-05T18:56:48.496] [INFO] default - Received request to d_yes_details for CUSTOMER ID: 50001
+[2019-05-05T18:56:48.497] [INFO] default - Calling MySQL DB to insert details of customers not enrolled with any dieticians for customer ID: 50001
+[2019-05-05T18:56:48.517] [INFO] default - Successfully inserted customer not enrolled dietician details to DB for customer ID: 50001
+[2019-05-05T18:56:49.881] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T18:56:52.449] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T18:56:52.449] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T18:56:52.462] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:cust13
+[2019-05-05T18:56:53.698] [INFO] default - Recieved request to c_get_check_menu for User_Id:50001
+[2019-05-05T18:56:53.699] [INFO] default - Calling DB to to get personalized customer menu for User_Id:50001
+[2019-05-05T18:56:53.798] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:50001
+[2019-05-05T18:56:58.477] [INFO] default - Recieved request to c_order_confirmation for User_Id:50001
+[2019-05-05T18:56:58.484] [INFO] default - Calling DB to insert the selected order for User_Id:50001
+[2019-05-05T18:56:58.503] [INFO] default - Recieved result from db and sending response to orderconfirmation for User_Id:50001
+[2019-05-05T18:56:58.503] [INFO] default - Order Succesfully placed for User_Id:50001
+[2019-05-05T18:56:59.967] [INFO] default - Recieved request to c_get_check_menu for User_Id:50001
+[2019-05-05T18:56:59.968] [INFO] default - Calling DB to to get personalized customer menu for User_Id:50001
+[2019-05-05T18:57:00.007] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:50001
+[2019-05-05T18:57:03.073] [INFO] default - Recieved request to c_order_confirmation for User_Id:50001
+[2019-05-05T18:57:03.073] [INFO] default - Calling DB to insert the selected order for User_Id:50001
+[2019-05-05T18:57:03.078] [INFO] default - Recieved result from db and sending response to orderconfirmation for User_Id:50001
+[2019-05-05T18:57:03.078] [INFO] default - Already placed a breakfast order for User_Id:50001
+[2019-05-05T18:57:04.273] [INFO] default - Recieved request to c_get_check_menu for User_Id:50001
+[2019-05-05T18:57:04.274] [INFO] default - Calling DB to to get personalized customer menu for User_Id:50001
+[2019-05-05T18:57:04.309] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:50001
+[2019-05-05T18:57:04.991] [INFO] default - Recieved request to c_get_order_history for User_Id:50001
+[2019-05-05T18:57:04.991] [INFO] default - Calling DB to get the order history for User_Id:50001
+[2019-05-05T18:57:04.998] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:50001
+[2019-05-05T18:57:06.498] [INFO] default - Recieved request to c_get_diet_plan for User_Id:50001
+[2019-05-05T18:57:06.498] [INFO] default - Calling DB to get the current diet plan for User_Id:50001
+[2019-05-05T18:57:06.507] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:50001
+[2019-05-05T18:57:07.539] [INFO] default - Recieved request to c_get_diet_progress for User_Id:50001
+[2019-05-05T18:57:07.540] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:50001
+[2019-05-05T18:57:07.546] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:50001
+[2019-05-05T18:57:08.198] [INFO] default - Recieved request to c_get_diet_history for User_Id:50001
+[2019-05-05T18:57:08.203] [INFO] default - Calling DB to view diet history for User_Id:50001
+[2019-05-05T18:57:08.213] [INFO] default - Recieved result from db and sending response to viewdiethistory for User_Id:50001
+[2019-05-05T18:57:08.783] [INFO] default - Recieved request to c_get_item_rating for User_Id:50001
+[2019-05-05T18:57:08.783] [INFO] default - Calling DB to to display previous orders for User_Id:50001
+[2019-05-05T18:57:08.787] [INFO] default - Recieved result from db and sending response to itemrating for User_Id:50001
+[2019-05-05T18:57:12.429] [INFO] default - Recieved request to c_post_item_rating_confirmation for User_Id:50001
+[2019-05-05T18:57:12.431] [INFO] default - Calling DB to insert the item rating for User_Id:50001
+[2019-05-05T18:57:12.442] [INFO] default - Recieved result from db and sending response to itemratingconfirmation for User_Id:50001
+[2019-05-05T18:57:13.608] [INFO] default - Recieved request to c_get_customer_home for User_Id:50001
+[2019-05-05T18:57:14.353] [INFO] default - Recieved request to c_get_dietician_rating for User_Id:50001
+[2019-05-05T18:57:14.354] [INFO] default - Calling DB to get dietician list for User_Id:50001
+[2019-05-05T18:57:14.363] [INFO] default - Recieved result from db and sending response to dieticianrating for User_Id:50001
+[2019-05-05T18:57:16.043] [INFO] default - Recieved request to c_get_customer_logout for User_Id:50001
+[2019-05-05T18:57:16.044] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T18:57:23.199] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T18:57:23.199] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T18:57:23.210] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-05T18:57:24.851] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-05T18:57:24.852] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-05T18:57:24.856] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-05T18:57:27.334] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T18:57:27.334] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T18:57:27.384] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T18:57:34.966] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T18:57:37.090] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T18:57:37.093] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T18:57:37.143] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:00:56.495] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:00:57.619] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:00:57.621] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:00:57.670] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:01:00.224] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T19:01:00.224] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T19:01:08.105] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T19:01:08.106] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T19:01:08.119] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-05T19:01:09.267] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:01:09.267] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:01:09.312] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:01:10.879] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:07.415] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:09.632] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:10.393] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:10.719] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:10.947] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:15.703] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:08:16.767] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:08:16.772] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:08:16.819] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:08:18.834] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T19:08:18.834] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T19:08:24.978] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T19:08:24.978] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T19:08:24.987] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-05T19:08:25.981] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:08:25.982] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:08:26.015] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:08:27.418] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T19:08:27.418] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T19:11:18.149] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T19:11:23.681] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T19:11:23.771] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T19:11:23.792] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-05T19:11:24.767] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:11:24.768] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:11:24.803] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:11:26.268] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:16:43.270] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T19:16:44.623] [INFO] default - Recieved request to c_get_dietician_rating for User_Id:1008
+[2019-05-05T19:16:44.627] [INFO] default - Calling DB to get dietician list for User_Id:1008
+[2019-05-05T19:16:44.645] [INFO] default - Recieved result from db and sending response to dieticianrating for User_Id:1008
+[2019-05-05T19:16:46.196] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T19:16:46.197] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T19:16:52.965] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T19:16:52.966] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T19:16:52.977] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-05T19:16:54.249] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:16:54.249] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:16:54.279] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:16:58.572] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T19:16:58.573] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T19:16:58.607] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T19:16:59.125] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-05T19:16:59.126] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-05T19:16:59.132] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-05T19:17:00.440] [INFO] default - Recieved request to c_get_diet_plan for User_Id:1008
+[2019-05-05T19:17:00.443] [INFO] default - Calling DB to get the current diet plan for User_Id:1008
+[2019-05-05T19:17:00.452] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:1008
+[2019-05-05T19:17:01.551] [INFO] default - Recieved request to c_get_diet_progress for User_Id:1008
+[2019-05-05T19:17:01.552] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:1008
+[2019-05-05T19:17:01.563] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:1008
+[2019-05-05T19:17:02.246] [INFO] default - Recieved request to c_get_diet_history for User_Id:1008
+[2019-05-05T19:17:02.246] [INFO] default - Calling DB to view diet history for User_Id:1008
+[2019-05-05T19:17:02.257] [INFO] default - Recieved result from db and sending response to viewdiethistory for User_Id:1008
+[2019-05-05T19:17:02.900] [INFO] default - Recieved request to c_get_item_rating for User_Id:1008
+[2019-05-05T19:17:02.900] [INFO] default - Calling DB to to display previous orders for User_Id:1008
+[2019-05-05T19:17:02.905] [INFO] default - Recieved result from db and sending response to itemrating for User_Id:1008
+[2019-05-05T19:17:03.452] [INFO] default - Recieved request to c_get_dietician_rating for User_Id:1008
+[2019-05-05T19:17:03.453] [INFO] default - Calling DB to get dietician list for User_Id:1008
+[2019-05-05T19:17:03.461] [INFO] default - Recieved result from db and sending response to dieticianrating for User_Id:1008
+[2019-05-05T19:17:06.714] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T19:17:06.715] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T19:17:50.788] [INFO] default - Received Request to d_get_login for dietician_id = undefined
+[2019-05-05T19:17:50.788] [INFO] default - sending Response dieticianlogin page
+[2019-05-05T19:17:58.012] [INFO] default - Received Request for d_post_home - dietician trying to login with emailid = dietician1@gmail.com
+[2019-05-05T19:17:58.012] [INFO] default - Calling MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T19:17:58.017] [INFO] default - Got response from MySQL
+[2019-05-05T19:17:58.018] [INFO] default - Got response MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T19:17:58.018] [INFO] default - Response sending as d_home page for dietician_id = undefined
+[2019-05-05T19:17:59.059] [INFO] default - Received Request to d_get_view_current_customers for dietician_id = 201
+[2019-05-05T19:17:59.060] [INFO] default - Calling MySQL to get response to d_dietician_customers_view view query  
+[2019-05-05T19:17:59.080] [INFO] default - Got MySQL response to d_dietician_customers_view view query  
+[2019-05-05T19:17:59.080] [INFO] default - Response Sending as d_view_current_customers page without customers for dietician_id = 201
+[2019-05-05T19:18:00.456] [INFO] default - Received Request for dietician home page for dietician_id = 201
+[2019-05-05T19:18:00.456] [INFO] default - Sending Response d_home for dietician logged in successfully with dietician_id = 201
+[2019-05-05T19:18:01.317] [INFO] default - Received Request to d_new_diet_plan_requests for dietician_id = 201
+[2019-05-05T19:18:01.317] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T19:18:01.325] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T19:18:01.325] [INFO] default - Response Sent as d_new_diet_plan_requests page with no new diet plan requests for dietician_id = 201
+[2019-05-05T19:18:03.137] [INFO] default - Received Request for d_get_logout for dietician_id = 201
+[2019-05-05T19:18:03.137] [INFO] default - Dietician logged out succesfully for dietician_id = 201
+[2019-05-05T19:18:10.075] [INFO] default - Received Request for d_post_home - dietician trying to login with emailid = dietician2@gmail.com
+[2019-05-05T19:18:10.075] [INFO] default - Calling MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T19:18:10.083] [INFO] default - Got response from MySQL
+[2019-05-05T19:18:10.083] [INFO] default - Got response MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T19:18:10.084] [INFO] default - Response sending as d_home page for dietician_id = undefined
+[2019-05-05T19:18:11.054] [INFO] default - Received Request to d_get_view_current_customers for dietician_id = 202
+[2019-05-05T19:18:11.054] [INFO] default - Calling MySQL to get response to d_dietician_customers_view view query  
+[2019-05-05T19:18:11.059] [INFO] default - Got MySQL response to d_dietician_customers_view view query  
+[2019-05-05T19:18:11.059] [INFO] default - Response Sending as d_view_current_customers page with customers for dietician_id = 202
+[2019-05-05T19:18:12.231] [INFO] default - Received Request to d_customer_diet_plan_list for dietician_id = 202
+[2019-05-05T19:18:12.232] [INFO] default - Calling MySQL to get response to customer query  
+[2019-05-05T19:18:12.233] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view query  
+[2019-05-05T19:18:12.241] [INFO] default - Got MySQL response to customer query  
+[2019-05-05T19:18:12.245] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view query  
+[2019-05-05T19:18:12.245] [INFO] default - Response Sending as d_customer_diet_plan_list page with diet plans list for dietician_id = 202
+[2019-05-05T19:18:13.118] [INFO] default - Received Request to d_customer_diet_plan_progress for dietician_id = 202
+[2019-05-05T19:18:13.119] [INFO] default - Calling MySQL to get response to d_customer_dietplan_progress_view view query  
+[2019-05-05T19:18:13.134] [INFO] default - Got MySQL response to d_customer_dietplan_progress_view view query  
+[2019-05-05T19:18:13.134] [INFO] default - Response Sending as d_customer_diet_plan_progress page with plan progress for dietician_id = 202
+[2019-05-05T19:18:17.483] [INFO] default - Received Request to d_new_diet_plan_requests for dietician_id = 202
+[2019-05-05T19:18:17.483] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T19:18:17.491] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T19:18:17.491] [INFO] default - Response Sent as d_new_diet_plan_requests page with no new diet plan requests for dietician_id = 202
+[2019-05-05T19:18:19.054] [INFO] default - Received Request to d_update_diet_plan_requests for dietician_id = 202
+[2019-05-05T19:18:19.054] [INFO] default - Calling MySQL to get response to d_update_diet_plans_list_view view query  
+[2019-05-05T19:18:19.061] [INFO] default - Calling MySQL response to d_update_diet_plans_list_view view query  
+[2019-05-05T19:18:19.061] [INFO] default - Response Sent as d_update_diet_plan_requests  page with no new update requests for dietician_id = 202
+[2019-05-05T19:18:19.957] [INFO] default - Received Request to d_get_view_current_customers for dietician_id = 202
+[2019-05-05T19:18:19.957] [INFO] default - Calling MySQL to get response to d_dietician_customers_view view query  
+[2019-05-05T19:18:19.961] [INFO] default - Got MySQL response to d_dietician_customers_view view query  
+[2019-05-05T19:18:19.961] [INFO] default - Response Sending as d_view_current_customers page with customers for dietician_id = 202
+[2019-05-05T19:18:21.058] [INFO] default - Received Request for d_get_logout for dietician_id = 202
+[2019-05-05T19:18:21.059] [INFO] default - Dietician logged out succesfully for dietician_id = 202
+[2019-05-05T19:18:23.714] [INFO] default - Sending Restaurant Login Page
+[2019-05-05T19:18:28.998] [INFO] default - Received request to func_r_check_login_info
+[2019-05-05T19:18:28.998] [INFO] default - Calling MySQL DB to validate the credentials for restaurat_user_id: Indian@gmail.com
+[2019-05-05T19:18:29.005] [INFO] default - Recieved result from db Confirming the credentials are valid for restaurant_email_id:Indian@gmail.com
+[2019-05-05T19:18:29.006] [INFO] default - Sent Response For Successful Login of restaurant_id = 102
+[2019-05-05T19:18:29.929] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T19:18:29.930] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:18:29.989] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:18:29.989] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:18:29.989] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:19:40.571] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T19:19:40.571] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:19:40.580] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:19:40.581] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:19:40.581] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:19:41.473] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T19:19:41.473] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T19:19:51.214] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T19:19:51.217] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T19:19:51.230] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T19:19:51.231] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T19:19:53.393] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T19:19:53.393] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:19:53.402] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:19:53.403] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T19:19:53.403] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:19:58.735] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T19:19:58.735] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T19:20:40.812] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:20:40.820] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T19:20:40.824] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:20:44.332] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:20:44.341] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T19:20:44.345] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:20:50.178] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T19:20:50.194] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T19:20:50.201] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T19:20:51.767] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-05T19:20:51.768] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-05T19:20:51.772] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-05T19:20:52.800] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-05T19:20:52.803] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-05T19:20:53.808] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-05T19:20:58.463] [INFO] default - Received request to r_generated_report for RESTAURANT_ID: 102
+[2019-05-05T19:20:58.470] [INFO] default - Generation of report for selected dates for restauant ID: 102
+[2019-05-05T19:21:01.772] [INFO] default - Received request to To get Logout Page for restaurant_id = 102
+[2019-05-05T19:21:01.772] [INFO] default - Logout successful for restaurant_id = 102
+[2019-05-05T19:21:01.772] [INFO] default - Sending Restaurant Login Page
+[2019-05-05T19:43:16.974] [INFO] default - Recieved request to get contact form
+[2019-05-05T19:43:22.446] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-05T19:43:25.743] [INFO] default - Recieved request to get contact form
+[2019-05-05T19:44:19.345] [INFO] default - Recieved request to get contact form
+[2019-05-05T19:44:29.688] [INFO] default - Recieved request to update contact form
+[2019-05-05T19:44:29.920] [INFO] default - Sending success message for contact form
+[2019-05-05T19:44:44.684] [INFO] default - Recieved request to a_get_admin_login 
+[2019-05-05T19:45:39.584] [INFO] default - Recieved request to a_post_admin_home
+[2019-05-05T19:45:39.686] [INFO] default - Calling DB to validate admin credentials for admin ID: admin1@mm.com
+[2019-05-05T19:45:39.703] [INFO] default - Recieved result from DB confirming the credentials are valid for ADMIN ID :admin1@mm.com
+[2019-05-05T19:47:08.222] [INFO] default - Recieved request to a_post_admin_home
+[2019-05-05T19:47:08.223] [INFO] default - Calling DB to validate admin credentials for admin ID: admin1@mm.com
+[2019-05-05T19:47:08.229] [INFO] default - Recieved result from DB confirming the credentials are valid for ADMIN ID :admin1@mm.com
+[2019-05-05T19:47:09.569] [INFO] default - Sending contactid list for contact form
+[2019-05-05T19:47:11.078] [INFO] default - Sending messages for selected contact id
+[2019-05-05T19:47:18.780] [INFO] default - Recieved request to r_get_restaurant_registration for ADMIN ID :admin1@mm.com
+[2019-05-05T19:48:44.804] [INFO] default - Sending contactid list for contact form
+[2019-05-05T19:48:46.163] [INFO] default - Sending messages for selected contact id
+[2019-05-05T19:49:51.194] [INFO] default - Sending contactid list for contact form
+[2019-05-05T19:49:52.801] [INFO] default - Sending messages for selected contact id
+[2019-05-05T19:49:57.446] [INFO] default - Sending messages for selected contact id
+[2019-05-05T19:50:02.428] [INFO] default - Sending messages for selected contact id
+[2019-05-05T23:16:00.110] [INFO] default - Recieved request to a_get_admin_login 
+[2019-05-05T23:16:08.849] [INFO] default - Recieved request to a_post_admin_home
+[2019-05-05T23:16:08.929] [INFO] default - Calling DB to validate admin credentials for admin ID: admin1@mm.com
+[2019-05-05T23:16:08.938] [ERROR] default - Invalid Credentials entered for ADMIN ID :null
+[2019-05-05T23:16:15.895] [INFO] default - Recieved request to a_post_admin_home
+[2019-05-05T23:16:15.896] [INFO] default - Calling DB to validate admin credentials for admin ID: admin1@mm.com
+[2019-05-05T23:16:15.908] [INFO] default - Recieved result from DB confirming the credentials are valid for ADMIN ID :admin1@mm.com
+[2019-05-05T23:16:17.897] [INFO] default - Recieved request to d_get_dietician_registration for ADMIN ID :admin1@mm.com
+[2019-05-05T23:16:24.439] [INFO] default - Recieved request to d_post_regdietsuccesful for admin ID: admin1@mm.com
+[2019-05-05T23:16:24.440] [INFO] default - Calling DB to insert dietician details for admin ID: admin1@mm.com
+[2019-05-05T23:16:24.449] [INFO] default - Inserted to DB dietician details for admin ID and dietician: admin1@mm.com dsf
+[2019-05-05T23:16:27.144] [INFO] default - Recieved request to a_get_admin_home for ADMIN ID :admin1@mm.com
+[2019-05-05T23:16:28.487] [INFO] default - Recieved request to r_get_restaurant_registration for ADMIN ID :admin1@mm.com
+[2019-05-05T23:16:33.262] [INFO] default - Recieved request to r_post_restaurant_registration for admin ID: admin1@mm.com
+[2019-05-05T23:16:33.263] [INFO] default - Calling DB to insert restaurant details for admin ID: admin1@mm.com
+[2019-05-05T23:16:33.277] [INFO] default - Inserted to DB restaurant details for ADMIN_ID and RESTAURANT : admin1@mm.com dsf
+[2019-05-05T23:16:40.784] [INFO] default - Recieved request to get contact form
+[2019-05-05T23:16:44.766] [INFO] default - Recieved request to update contact form
+[2019-05-05T23:16:44.990] [INFO] default - Sending success message for contact form
+[2019-05-05T23:17:17.223] [INFO] default - Recieved request to a_get_admin_home for ADMIN ID :admin1@mm.com
+[2019-05-05T23:17:18.630] [INFO] default - Sending contactid list for contact form
+[2019-05-05T23:17:22.982] [INFO] default - Sending messages for selected contact id
+[2019-05-05T23:17:29.292] [INFO] default - Recieved request to c_get_admin_logout for User_Id:admin1@mm.com
+[2019-05-05T23:17:29.293] [INFO] default - Admin Logged Out Succesfully
+[2019-05-05T23:17:33.335] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-05T23:17:47.822] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T23:17:47.824] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T23:17:47.845] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:stephan@gmail.com
+[2019-05-05T23:17:55.017] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T23:17:55.018] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T23:17:55.064] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T23:17:58.592] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T23:17:58.593] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T23:17:58.636] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T23:17:59.532] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-05T23:17:59.534] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-05T23:17:59.548] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-05T23:18:00.436] [INFO] default - Recieved request to c_get_diet_plan for User_Id:1008
+[2019-05-05T23:18:00.436] [INFO] default - Calling DB to get the current diet plan for User_Id:1008
+[2019-05-05T23:18:00.445] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:1008
+[2019-05-05T23:18:02.795] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T23:18:02.796] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T23:18:02.839] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T23:18:08.973] [INFO] default - Recieved request to c_order_confirmation for User_Id:1008
+[2019-05-05T23:18:08.974] [INFO] default - Calling DB to insert the selected order for User_Id:1008
+[2019-05-05T23:18:08.992] [INFO] default - Recieved result from db and sending response to orderconfirmation for User_Id:1008
+[2019-05-05T23:18:08.993] [INFO] default - Order Succesfully placed for User_Id:1008
+[2019-05-05T23:18:10.490] [INFO] default - Recieved request to c_get_diet_progress for User_Id:1008
+[2019-05-05T23:18:10.491] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:1008
+[2019-05-05T23:18:10.503] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:1008
+[2019-05-05T23:18:12.048] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-05T23:18:12.048] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-05T23:18:12.054] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-05T23:18:12.878] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T23:18:12.879] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T23:18:12.915] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T23:18:13.741] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-05T23:18:16.786] [INFO] default - Recieved request to c_get_diet_history for User_Id:1008
+[2019-05-05T23:18:16.787] [INFO] default - Calling DB to view diet history for User_Id:1008
+[2019-05-05T23:18:16.794] [INFO] default - Recieved result from db and sending response to viewdiethistory for User_Id:1008
+[2019-05-05T23:18:17.928] [INFO] default - Recieved request to c_get_diet_progress for User_Id:1008
+[2019-05-05T23:18:17.929] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:1008
+[2019-05-05T23:18:17.939] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:1008
+[2019-05-05T23:18:18.611] [INFO] default - Recieved request to c_get_diet_plan for User_Id:1008
+[2019-05-05T23:18:18.612] [INFO] default - Calling DB to get the current diet plan for User_Id:1008
+[2019-05-05T23:18:18.622] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:1008
+[2019-05-05T23:18:19.599] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-05T23:18:19.600] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-05T23:18:19.632] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-05T23:18:21.162] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-05T23:18:21.163] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-05T23:18:21.168] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-05T23:18:23.123] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1008
+[2019-05-05T23:18:23.124] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T23:18:42.302] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-05T23:18:42.303] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-05T23:18:42.312] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Sara@gmail.com
+[2019-05-05T23:18:50.874] [INFO] default - Recieved request to c_get_check_menu for User_Id:1001
+[2019-05-05T23:18:50.874] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1001
+[2019-05-05T23:18:50.918] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1001
+[2019-05-05T23:18:57.671] [INFO] default - Recieved request to c_order_confirmation for User_Id:1001
+[2019-05-05T23:18:57.672] [INFO] default - Calling DB to insert the selected order for User_Id:1001
+[2019-05-05T23:18:57.682] [INFO] default - Recieved result from db and sending response to orderconfirmation for User_Id:1001
+[2019-05-05T23:18:57.682] [INFO] default - Order Succesfully placed for User_Id:1001
+[2019-05-05T23:18:59.576] [INFO] default - Recieved request to c_get_order_history for User_Id:1001
+[2019-05-05T23:18:59.576] [INFO] default - Calling DB to get the order history for User_Id:1001
+[2019-05-05T23:18:59.579] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1001
+[2019-05-05T23:19:00.558] [INFO] default - Recieved request to c_get_diet_plan for User_Id:1001
+[2019-05-05T23:19:00.559] [INFO] default - Calling DB to get the current diet plan for User_Id:1001
+[2019-05-05T23:19:00.563] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:1001
+[2019-05-05T23:19:01.574] [INFO] default - Recieved request to c_get_diet_progress for User_Id:1001
+[2019-05-05T23:19:01.575] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:1001
+[2019-05-05T23:19:01.583] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:1001
+[2019-05-05T23:19:02.756] [INFO] default - Recieved request to c_get_customer_home for User_Id:1001
+[2019-05-05T23:19:04.711] [INFO] default - Recieved request to c_get_item_rating for User_Id:1001
+[2019-05-05T23:19:04.713] [INFO] default - Calling DB to to display previous orders for User_Id:1001
+[2019-05-05T23:19:04.718] [INFO] default - Recieved result from db and sending response to itemrating for User_Id:1001
+[2019-05-05T23:19:07.322] [INFO] default - Recieved request to c_post_item_rating_confirmation for User_Id:1001
+[2019-05-05T23:19:07.323] [INFO] default - Calling DB to insert the item rating for User_Id:1001
+[2019-05-05T23:19:07.333] [INFO] default - Recieved result from db and sending response to itemratingconfirmation for User_Id:1001
+[2019-05-05T23:19:08.203] [INFO] default - Recieved request to c_get_customer_home for User_Id:1001
+[2019-05-05T23:19:09.928] [INFO] default - Recieved request to c_get_dietician_rating for User_Id:1001
+[2019-05-05T23:19:09.929] [INFO] default - Calling DB to get dietician list for User_Id:1001
+[2019-05-05T23:19:09.933] [INFO] default - Recieved result from db and sending response to dieticianrating for User_Id:1001
+[2019-05-05T23:19:13.606] [INFO] default - Recieved request to c_post_dietician_rating_confirmation for User_Id:1001
+[2019-05-05T23:19:13.607] [INFO] default - Calling DB to insert the dietician rating for User_Id:1001
+[2019-05-05T23:19:13.617] [INFO] default - Already provided rating for this dietician with same User Id. So overwriting it with User_Id:1001
+[2019-05-05T23:19:13.618] [INFO] default - Recieved result from db and sending response to dieticianratingconfirmation for User_Id:1001
+[2019-05-05T23:19:14.831] [INFO] default - Recieved request to c_get_customer_logout for User_Id:1001
+[2019-05-05T23:19:14.831] [INFO] default - Customer Logged Out Succesfully
+[2019-05-05T23:19:20.702] [INFO] default - Sending Restaurant Login Page
+[2019-05-05T23:19:26.684] [INFO] default - Received request to func_r_check_login_info
+[2019-05-05T23:19:26.684] [INFO] default - Calling MySQL DB to validate the credentials for restaurat_user_id: indian@gmail.com
+[2019-05-05T23:19:26.697] [INFO] default - Recieved result from db Confirming the credentials are valid for restaurant_email_id:indian@gmail.com
+[2019-05-05T23:19:26.697] [INFO] default - Sent Response For Successful Login of restaurant_id = 102
+[2019-05-05T23:19:27.844] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:19:27.845] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:19:27.858] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:27.858] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:27.858] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:19:30.005] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:19:30.005] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:19:39.041] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:19:39.042] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:19:39.057] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:39.057] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:19:40.706] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:19:40.706] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:19:49.252] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:19:49.252] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:19:49.265] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:49.265] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:19:50.459] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:19:50.459] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:19:50.469] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:50.470] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:19:50.470] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:20:07.624] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:20:07.624] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:20:16.252] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:20:16.252] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:20:16.268] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:16.269] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:20:18.198] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:20:18.198] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:20:18.207] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:18.208] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:18.208] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:20:23.427] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:20:23.427] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:20:34.457] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:20:34.457] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:20:34.468] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:34.468] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:20:36.407] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:20:36.407] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:20:36.415] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:36.415] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:20:36.416] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:20:52.602] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:20:52.602] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:21:02.845] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:21:02.845] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:21:02.866] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:02.866] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:21:04.516] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:21:04.516] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:21:04.530] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:04.530] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:04.530] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:21:20.375] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:21:20.375] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:21:33.730] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:21:33.730] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:21:33.747] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:33.747] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:21:36.199] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:21:36.200] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:21:36.213] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:36.213] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:21:36.213] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:08.795] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:22:08.795] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:22:19.958] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:22:19.958] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:22:19.973] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:19.973] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:22:21.938] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:22:21.938] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:21.948] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:21.948] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:21.948] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:36.773] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:36.785] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:36.790] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:40.178] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:40.188] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:40.193] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:43.451] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:43.470] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:43.475] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:45.089] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:22:45.089] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:45.104] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:45.104] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:45.104] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:45.555] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:22:45.555] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:22:45.568] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:45.568] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:22:45.568] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:22:51.087] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-05T23:22:51.100] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-05T23:22:53.150] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-05T23:23:04.106] [INFO] default - Received request to r_generated_report for RESTAURANT_ID: 102
+[2019-05-05T23:23:04.134] [INFO] default - Generation of report for selected dates for restauant ID: 102
+[2019-05-05T23:23:05.290] [INFO] default - Received request to To get Logout Page for restaurant_id = 102
+[2019-05-05T23:23:05.290] [INFO] default - Logout successful for restaurant_id = 102
+[2019-05-05T23:23:05.291] [INFO] default - Sending Restaurant Login Page
+[2019-05-05T23:23:09.759] [INFO] default - Received Request to d_get_login for dietician_id = undefined
+[2019-05-05T23:23:09.759] [INFO] default - sending Response dieticianlogin page
+[2019-05-05T23:23:15.362] [INFO] default - Received Request for d_post_home - dietician trying to login with emailid = kate@gmail.com
+[2019-05-05T23:23:15.362] [INFO] default - Calling MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T23:23:15.376] [INFO] default - Got response from MySQL
+[2019-05-05T23:23:15.376] [INFO] default - Got response MySQL DB procedure d_check_dietician_login_info for checking login info 
+[2019-05-05T23:23:15.376] [INFO] default - Response sending as d_home page for dietician_id = undefined
+[2019-05-05T23:23:16.706] [INFO] default - Received Request to d_get_view_current_customers for dietician_id = 205
+[2019-05-05T23:23:16.707] [INFO] default - Calling MySQL to get response to d_dietician_customers_view view query  
+[2019-05-05T23:23:16.721] [INFO] default - Got MySQL response to d_dietician_customers_view view query  
+[2019-05-05T23:23:16.722] [INFO] default - Response Sending as d_view_current_customers page with customers for dietician_id = 205
+[2019-05-05T23:23:17.954] [INFO] default - Received Request to d_customer_diet_plan_list for dietician_id = 205
+[2019-05-05T23:23:17.955] [INFO] default - Calling MySQL to get response to customer query  
+[2019-05-05T23:23:17.956] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view query  
+[2019-05-05T23:23:17.964] [INFO] default - Got MySQL response to customer query  
+[2019-05-05T23:23:17.969] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view query  
+[2019-05-05T23:23:17.969] [INFO] default - Response Sending as d_customer_diet_plan_list page with diet plans list for dietician_id = 205
+[2019-05-05T23:23:19.321] [INFO] default - Received Request to d_customer_diet_plan_progress for dietician_id = 205
+[2019-05-05T23:23:19.322] [INFO] default - Calling MySQL to get response to d_customer_dietplan_progress_view view query  
+[2019-05-05T23:23:19.332] [INFO] default - Got MySQL response to d_customer_dietplan_progress_view view query  
+[2019-05-05T23:23:19.332] [INFO] default - Response Sending as d_customer_diet_plan_progress page with plan progress for dietician_id = 205
+[2019-05-05T23:23:20.247] [INFO] default - Received Request to d_new_diet_plan_requests for dietician_id = 205
+[2019-05-05T23:23:20.247] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:20.257] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:20.257] [INFO] default - Response Sent as d_new_diet_plan_requests page with diet plan requests for dietician_id = 205
+[2019-05-05T23:23:21.244] [INFO] default - Received Request to d_new_diet_plan_details for dietician_id = 205
+[2019-05-05T23:23:21.245] [INFO] default - Calling MySQL to get response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:21.246] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:21.246] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:21.261] [INFO] default - Got MySQL response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:21.285] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:21.293] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:21.294] [INFO] default - Response Sent as d_new_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:23.729] [INFO] default - Received Request to d_add_diet_plan_details for dietician_id = 205
+[2019-05-05T23:23:23.729] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:23.737] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:23.737] [INFO] default - Response Sent as d_add_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:25.008] [INFO] default - Received Request to d_add_diet_plan_details_submit for dietician_id = 205
+[2019-05-05T23:23:25.008] [INFO] default - Calling MySQL procedure d_add_diet_details  
+[2019-05-05T23:23:25.017] [INFO] default - Got response to MySQL procedure d_add_diet_details  
+[2019-05-05T23:23:25.017] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:25.025] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:25.025] [INFO] default - Response Sent as d_add_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:26.916] [INFO] default - Received Request to d_add_diet_plan_details for dietician_id = 205
+[2019-05-05T23:23:26.916] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:26.926] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:26.927] [INFO] default - Response Sent as d_add_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:28.988] [INFO] default - Received Request to d_new_diet_plan_requests for dietician_id = 205
+[2019-05-05T23:23:28.988] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:28.997] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:28.997] [INFO] default - Response Sent as d_new_diet_plan_requests page with diet plan requests for dietician_id = 205
+[2019-05-05T23:23:30.086] [INFO] default - Received Request to d_new_diet_plan_details for dietician_id = 205
+[2019-05-05T23:23:30.086] [INFO] default - Calling MySQL to get response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:30.087] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:30.088] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:30.102] [INFO] default - Got MySQL response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:30.136] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:30.139] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:30.139] [INFO] default - Response Sent as d_new_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:32.025] [INFO] default - Received Request to d_finalize_new_diet_plan for dietician_id = 205
+[2019-05-05T23:23:32.025] [INFO] default - Calling MySQL d_finalize_new_diet_plan
+[2019-05-05T23:23:32.041] [INFO] default - Got response from MySQL d_finalize_new_diet_plan
+[2019-05-05T23:23:32.041] [INFO] default - Sending d_dietician_information as Response to d_finalize_new_diet_plan for dietician_id=205
+[2019-05-05T23:23:33.172] [INFO] default - Received Request to d_update_diet_plan_requests for dietician_id = 205
+[2019-05-05T23:23:33.172] [INFO] default - Calling MySQL to get response to d_update_diet_plans_list_view view query  
+[2019-05-05T23:23:33.184] [INFO] default - Calling MySQL response to d_update_diet_plans_list_view view query  
+[2019-05-05T23:23:33.185] [INFO] default - Response Sent as d_view_current_customers page with new update requests for dietician_id = 205
+[2019-05-05T23:23:34.297] [INFO] default - Received Request to d_update_diet_plan_details for dietician_id = 205
+[2019-05-05T23:23:34.297] [INFO] default - Calling MySQL to get response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:34.298] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:34.299] [INFO] default - Calling MySQL to get response to d_update_diet_plan_dates_view view query  
+[2019-05-05T23:23:34.314] [INFO] default - Got MySQL response to d_diet_plans_cust_health_details_view view query  
+[2019-05-05T23:23:34.335] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:34.341] [INFO] default - Got MySQL response to d_update_diet_plan_dates_view view query  
+[2019-05-05T23:23:34.341] [INFO] default - Response Sent as d_update_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:37.994] [INFO] default - Received Request to d_update_diet_plan_details_form for dietician_id = 205
+[2019-05-05T23:23:37.995] [INFO] default - Calling MySQL to get response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:38.001] [INFO] default - Got MySQL response to d_customer_diet_plan_details_view view query  
+[2019-05-05T23:23:38.002] [INFO] default - Response Sent as d_update_diet_plan_details_form page for dietician_id = 205
+[2019-05-05T23:23:39.897] [INFO] default - Received Request to d_update_diet_plan_details_submit for dietician_id = 205
+[2019-05-05T23:23:39.898] [INFO] default - Calling MySQL d_add_diet_details
+[2019-05-05T23:23:39.907] [INFO] default - Got response from MySQL d_add_diet_details
+[2019-05-05T23:23:39.908] [INFO] default - Calling MySQL to get response to d_update_diet_plan_dates_view view query  
+[2019-05-05T23:23:39.919] [INFO] default - Got MySQL response to d_update_diet_plan_dates_view view query  
+[2019-05-05T23:23:39.919] [INFO] default - Response Sent as d_update_diet_plan_details page for dietician_id = 205
+[2019-05-05T23:23:41.844] [INFO] default - Received Request to d_finalize_update_diet_plan for dietician_id = 205
+[2019-05-05T23:23:41.845] [INFO] default - Calling MySQL d_finalize_update_diet_plan
+[2019-05-05T23:23:41.852] [INFO] default - Got response from MySQL d_finalize_update_diet_plan
+[2019-05-05T23:23:41.852] [INFO] default - Sending d_dietician_information as Response to d_finalize_update_diet_plan for dietician_id=205
+[2019-05-05T23:23:43.104] [INFO] default - Received Request to d_get_view_current_customers for dietician_id = 205
+[2019-05-05T23:23:43.105] [INFO] default - Calling MySQL to get response to d_dietician_customers_view view query  
+[2019-05-05T23:23:43.112] [INFO] default - Got MySQL response to d_dietician_customers_view view query  
+[2019-05-05T23:23:43.113] [INFO] default - Response Sending as d_view_current_customers page with customers for dietician_id = 205
+[2019-05-05T23:23:45.027] [INFO] default - Received Request to d_new_diet_plan_requests for dietician_id = 205
+[2019-05-05T23:23:45.027] [INFO] default - Calling MySQL to get response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:45.038] [INFO] default - Got MySQL response to d_customer_diet_plans_list_view view query  
+[2019-05-05T23:23:45.038] [INFO] default - Response Sent as d_new_diet_plan_requests page with no new diet plan requests for dietician_id = 205
+[2019-05-05T23:23:45.789] [INFO] default - Received Request to d_update_diet_plan_requests for dietician_id = 205
+[2019-05-05T23:23:45.789] [INFO] default - Calling MySQL to get response to d_update_diet_plans_list_view view query  
+[2019-05-05T23:23:45.794] [INFO] default - Calling MySQL response to d_update_diet_plans_list_view view query  
+[2019-05-05T23:23:45.794] [INFO] default - Response Sent as d_update_diet_plan_requests  page with no new update requests for dietician_id = 205
+[2019-05-05T23:23:48.166] [INFO] default - Received Request for d_get_logout for dietician_id = 205
+[2019-05-05T23:23:48.167] [INFO] default - Dietician logged out succesfully for dietician_id = 205
+[2019-05-05T23:24:21.803] [INFO] default - Sending Restaurant Login Page
+[2019-05-05T23:24:29.374] [INFO] default - Received request to func_r_check_login_info
+[2019-05-05T23:24:29.375] [INFO] default - Calling MySQL DB to validate the credentials for restaurat_user_id: indian@gmail.com
+[2019-05-05T23:24:29.387] [INFO] default - Recieved result from db Confirming the credentials are valid for restaurant_email_id:indian@gmail.com
+[2019-05-05T23:24:29.387] [INFO] default - Sent Response For Successful Login of restaurant_id = 102
+[2019-05-05T23:24:30.958] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:24:30.959] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:24:42.112] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:24:42.112] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:24:42.127] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:24:42.127] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:24:45.239] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:24:45.240] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:24:45.247] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:24:45.248] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:24:45.248] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:24:49.716] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:24:49.716] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:24:58.798] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:24:58.798] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:24:58.813] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:24:58.813] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:25:00.622] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:25:00.622] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:25:00.632] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:00.633] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:00.633] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:25:08.395] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:25:08.395] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:25:22.592] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:25:22.592] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:25:22.603] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:22.604] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:25:24.272] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:25:24.273] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:25:24.282] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:24.282] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:24.282] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:25:38.109] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:25:38.109] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:25:49.686] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:25:49.687] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:25:49.702] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:49.702] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:25:51.468] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:25:51.468] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:25:51.479] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:51.480] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:25:51.480] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-05T23:26:39.762] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-05T23:26:39.762] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-05T23:26:53.473] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-05T23:26:53.473] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-05T23:26:53.495] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-05T23:26:53.495] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-05T23:26:57.543] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-05T23:26:57.543] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-05T23:26:57.554] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:26:57.555] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-05T23:26:57.555] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T19:51:42.421] [INFO] default - Recieved request to a_get_admin_login 
+[2019-05-07T19:53:08.913] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-07T19:53:25.926] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-07T19:53:26.016] [INFO] default - Calling DB to insert customer details
+[2019-05-07T19:54:24.235] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-07T19:54:31.103] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-07T19:54:31.187] [INFO] default - Calling DB to insert customer details
+[2019-05-07T19:54:31.212] [INFO] default - Inserted to DB customer registration details for customeremail: km
+[2019-05-07T19:54:34.166] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T19:54:34.167] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T19:54:34.184] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:km
+[2019-05-07T19:54:35.445] [INFO] default - Calling MySQL DB to list all the dieticians enrolled  for customer ID: 50000
+[2019-05-07T19:54:35.445] [INFO] default - Request received for c_d_dieticianYes for customer_ID: 50000
+[2019-05-07T19:54:35.466] [INFO] default - Successfully listed list of enrolled dieticians for customer ID: 50000
+[2019-05-07T19:55:21.626] [INFO] default - Received request to d_yes_details for CUSTOMER ID: 50000
+[2019-05-07T19:55:21.627] [INFO] default - Calling MySQL DB to insert additional details of customer enrolled with a dietician for customer ID: 50000
+[2019-05-07T19:55:21.639] [INFO] default - Successfully inserted customer enrolled dietician details to DB for customer ID: 50000
+[2019-05-07T19:55:24.570] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T19:55:27.463] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-07T19:55:37.339] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T19:55:40.176] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T19:55:40.177] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T19:55:40.188] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:km
+[2019-05-07T19:56:31.566] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T19:56:31.567] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T19:56:31.582] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:km
+[2019-05-07T19:56:50.255] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T19:58:02.936] [INFO] default - Recieved request to c_get_customer_registration
+[2019-05-07T19:58:16.401] [INFO] default - Recieved request to c_post_customer_login
+[2019-05-07T19:58:16.402] [INFO] default - Calling DB to insert customer details
+[2019-05-07T19:58:16.410] [INFO] default - Inserted to DB customer registration details for customeremail: thai
+[2019-05-07T19:58:22.912] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T19:58:22.913] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T19:58:22.921] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:thai
+[2019-05-07T19:58:32.866] [INFO] default - Calling MySQL DB to list all the dieticians enrolled  for customer ID: 50001
+[2019-05-07T19:58:32.866] [INFO] default - Request received for c_d_dieticianYes for customer_ID: 50001
+[2019-05-07T19:58:32.875] [INFO] default - Successfully listed list of enrolled dieticians for customer ID: 50001
+[2019-05-07T20:01:00.520] [INFO] default - Received request to d_yes_details for CUSTOMER ID: 50001
+[2019-05-07T20:01:00.521] [INFO] default - Calling MySQL DB to insert additional details of customer enrolled with a dietician for customer ID: 50001
+[2019-05-07T20:01:00.537] [INFO] default - Successfully inserted customer enrolled dietician details to DB for customer ID: 50001
+[2019-05-07T20:01:12.074] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T20:01:18.049] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T20:01:18.050] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T20:01:18.060] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:thai
+[2019-05-07T20:01:57.489] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T20:03:14.875] [INFO] default - Recieved request to c_get_customer_login
+[2019-05-07T20:04:53.027] [INFO] default - Recieved request to c_post_customer_home 
+[2019-05-07T20:04:53.028] [INFO] default - Calling MySQL DB to validate the credentials
+[2019-05-07T20:04:53.036] [INFO] default - Recieved result from db Confirming the credentials are valid for User_Id:Stephan@gmail.com
+[2019-05-07T20:04:54.452] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-07T20:04:54.453] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-07T20:04:54.552] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-07T20:05:19.343] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-07T20:05:20.438] [INFO] default - Recieved request to c_get_order_history for User_Id:1008
+[2019-05-07T20:05:20.439] [INFO] default - Calling DB to get the order history for User_Id:1008
+[2019-05-07T20:05:20.451] [INFO] default - Recieved result from db and sending response to vieworderhistory for User_Id:1008
+[2019-05-07T20:05:22.334] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-07T20:05:22.335] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-07T20:05:22.389] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-07T20:05:27.245] [INFO] default - Recieved request to c_order_confirmation for User_Id:1008
+[2019-05-07T20:05:27.246] [INFO] default - Calling DB to insert the selected order for User_Id:1008
+[2019-05-07T20:05:27.261] [INFO] default - Recieved result from db and sending response to orderconfirmation for User_Id:1008
+[2019-05-07T20:05:27.261] [INFO] default - Order Succesfully placed for User_Id:1008
+[2019-05-07T20:05:29.097] [INFO] default - Recieved request to c_get_check_menu for User_Id:1008
+[2019-05-07T20:05:29.097] [INFO] default - Calling DB to to get personalized customer menu for User_Id:1008
+[2019-05-07T20:05:29.145] [INFO] default - Recieved result from db and sending response to checkmenu for User_Id:1008
+[2019-05-07T20:05:30.321] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-07T20:05:31.187] [INFO] default - Recieved request to c_get_diet_plan for User_Id:1008
+[2019-05-07T20:05:31.188] [INFO] default - Calling DB to get the current diet plan for User_Id:1008
+[2019-05-07T20:05:31.200] [INFO] default - Recieved result from db and sending response to viewdietplan for User_Id:1008
+[2019-05-07T20:05:44.019] [INFO] default - Recieved request to c_request_change_diet_plan for User_Id:1008
+[2019-05-07T20:05:44.020] [INFO] default - Calling DB to get start_date for the current diet plan for User_Id:1008
+[2019-05-07T20:05:44.033] [INFO] default - Recieved result from db and sending response to reqchangedp for User_Id:1008
+[2019-05-07T20:05:58.690] [INFO] default - Recieved request to c_post_request_confirmation for User_Id:1008
+[2019-05-07T20:05:58.691] [INFO] default - Calling DB to request change in current diet plan for User_Id:1008
+[2019-05-07T20:05:58.705] [INFO] default - Recieved result from  db and sending response to requestconfirmation for User_Id:1008
+[2019-05-07T20:06:00.811] [INFO] default - Recieved request to c_get_customer_home for User_Id:1008
+[2019-05-07T20:06:07.865] [INFO] default - Recieved request to c_get_diet_progress for User_Id:1008
+[2019-05-07T20:06:07.866] [INFO] default - Calling DB to get diet progress details in current diet plan for User_Id:1008
+[2019-05-07T20:06:07.879] [INFO] default - Recieved result from  db and sending response to viewdietprogress for User_Id:1008
+[2019-05-07T20:06:10.862] [INFO] default - Recieved request to c_update_diet_progress for User_Id:1008
+[2019-05-07T20:06:28.345] [INFO] default - Recieved request to c_update_diet_progress for User_Id:1008
+[2019-05-07T20:06:31.341] [INFO] default - Recieved request to c_post_update_confirmation for User_Id:1008
+[2019-05-07T20:06:31.343] [INFO] default - Calling DB to update diet progress in current diet plan for User_Id:1008
+[2019-05-07T20:06:31.356] [ERROR] default - DB Error while getting the update confirmation for diet progress
+[2019-05-07T20:20:28.165] [INFO] default - Sending Restaurant Login Page
+[2019-05-07T20:21:09.893] [INFO] default - Received request to func_r_check_login_info
+[2019-05-07T20:21:09.894] [INFO] default - Calling MySQL DB to validate the credentials for restaurat_user_id: indian@gmail.com
+[2019-05-07T20:21:10.029] [INFO] default - Recieved result from db Confirming the credentials are valid for restaurant_email_id:indian@gmail.com
+[2019-05-07T20:21:10.029] [INFO] default - Sent Response For Successful Login of restaurant_id = 102
+[2019-05-07T20:21:19.223] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-07T20:21:19.224] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:21:19.254] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:19.254] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:19.254] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:21:27.697] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-07T20:21:27.697] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-07T20:21:39.101] [INFO] default - Received request to To Add Menu Items r_add_menu_items for restaurant_id = 102
+[2019-05-07T20:21:39.102] [INFO] default - Calling MySQL DB to add menu item for for restaurant_id: 102
+[2019-05-07T20:21:39.123] [INFO] default - Added item to menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:39.124] [INFO] default - Sending r_information for item added successfully for restaurant_id = 102
+[2019-05-07T20:21:42.368] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:21:42.385] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:42.387] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:21:47.374] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:21:47.393] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:47.397] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:21:53.335] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:21:53.366] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:21:53.377] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:21:56.229] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-07T20:21:56.229] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-07T20:21:56.235] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-07T20:21:57.670] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:21:57.687] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:22:04.109] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:04.124] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:04.127] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:05.302] [INFO] default - Received request to To get Restaurant Add Menu Items Form for restaurant_id = 102
+[2019-05-07T20:22:05.302] [INFO] default - Sent Restaurant Add Menu Item For for restaurant_id = 102
+[2019-05-07T20:22:06.266] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:06.282] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:06.283] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:18.409] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-07T20:22:18.410] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-07T20:22:18.424] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-07T20:22:19.028] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:22:19.046] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:22:19.719] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-07T20:22:20.678] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:20.693] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:20.696] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:25.846] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:25.857] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:25.858] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:30.827] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:30.835] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:30.843] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:39.928] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:39.937] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:39.942] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:43.629] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:43.651] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:43.653] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:22:50.246] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-07T20:22:50.246] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:22:50.265] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:50.265] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:22:50.265] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:01.248] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:01.262] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:01.263] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:06.202] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:06.213] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:06.218] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:10.795] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:10.810] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:10.813] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:14.580] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:14.592] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:14.596] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:19.491] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:19.508] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:19.509] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:22.767] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:22.773] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:22.776] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:27.807] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:27.821] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:27.823] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:41.885] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:41.905] [INFO] default - Update menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:41.908] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:23:44.290] [INFO] default - Received request to To get Restaurant Menu Page for restaurant_id = 102
+[2019-05-07T20:23:44.290] [INFO] default - Calling MySQL DB to get menu  for restaurant_id: 102
+[2019-05-07T20:23:44.302] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:44.303] [INFO] default - View menu information received from DB for restaurant_id = 102
+[2019-05-07T20:23:44.303] [INFO] default - Sent Restaurant Menu Page with items for restaurant_id = 102
+[2019-05-07T20:24:02.259] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:02.259] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-07T20:24:02.263] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-07T20:24:03.582] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:03.595] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:24:05.857] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:08.645] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:08.645] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-07T20:24:08.651] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-07T20:24:09.159] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:09.163] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:24:09.849] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:11.023] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:11.034] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:24:12.522] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:19.952] [INFO] default - Received request to r_generated_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:19.965] [INFO] default - Generation of report for selected dates for restauant ID: 102
+[2019-05-07T20:24:35.295] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:35.300] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:24:36.920] [INFO] default - Received request to r_view_todays_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:36.921] [INFO] default - Calling MySQL DB to retrive todays order details
+[2019-05-07T20:24:36.926] [INFO] default - Successfully selected todays orders for restaurant ID: 102
+[2019-05-07T20:24:38.467] [INFO] default - Received request to r_view_tomos_orders for RESTAURNT ID: 102
+[2019-05-07T20:24:38.471] [INFO] default - Successfully selected next days orders for restaurant ID: 102
+[2019-05-07T20:24:42.972] [INFO] default - Received request to r_view_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:52.268] [INFO] default - Received request to r_generated_report for RESTAURANT_ID: 102
+[2019-05-07T20:24:52.279] [INFO] default - Generation of report for selected dates for restauant ID: 102
+[2019-05-07T20:25:20.407] [INFO] default - Received request to r_get_home to get Restaurant Home Page for restaurant_id = 102
+[2019-05-07T20:25:20.408] [INFO] default - Sent Restaurant Home Page r_home for restaurant_id = 102
+[2019-05-07T20:25:24.289] [INFO] default - Received request to To get Logout Page for restaurant_id = 102
+[2019-05-07T20:25:24.289] [INFO] default - Logout successful for restaurant_id = 102
+[2019-05-07T20:25:24.290] [INFO] default - Sending Restaurant Login Page
+[2019-05-07T21:12:28.813] [INFO] default - Received request to To get Logout Page for restaurant_id = undefined

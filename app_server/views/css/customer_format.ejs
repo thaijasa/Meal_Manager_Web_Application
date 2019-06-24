@@ -1,0 +1,298 @@
+ <!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<style>
+
+body    { 
+    padding:50px;
+    }
+    
+
+.heading_style{
+   text-align: center;
+   margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 1px white, 0 2px #777;  
+
+}
+
+.custhome-table td,.custhome-table th,.custhome-table-all td,.custhome-table-all th
+{padding:8px 120px;display:table-cell;text-align:left;vertical-align:top}
+
+.centered_div {
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 20%;
+   left: 30%;
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.button {
+
+  background-color:rgba(221, 15, 15, 0.904); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height:60px;width:300px
+}
+
+.button:hover {
+      background-color: rgba(223, 89, 0, 0.973);
+      color: white;
+}
+
+
+.view_table {
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 25%;
+   left: 23%;
+   
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+.view_diet_table{
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 25%;
+   left: 30%; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+
+}
+
+.view_hist_table{
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 25%;
+   left: 20%; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.view_table #view_table_tableid,.view_diet_table #view_table_tableid,
+.view_hist_table #view_table_tableid,.breakfast_id #view_table_tableid,
+.lunch_id #view_table_tableid, .dinner_id #view_table_tableid
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.view_table #view_table_tableid td, .view_diet_table #view_table_tableid td, .view_hist_table #view_table_tableid td, .breakfast_id #view_table_tableid td, .lunch_id #view_table_tablelnid td, .dinner_id #view_table_tabledinid td,
+.view_table #view_table_tableid th,.view_diet_table #view_table_tableid th, .view_hist_table #view_table_tableid th, .breakfast_id #view_table_tableid th, .lunch_id #view_table_tablelnid th, .dinner_id #view_table_tabledinid th
+{
+  border: 2px solid #ddd;
+  padding: 8px;
+}
+
+.view_table #view_table_tableid tr:nth-child(even){background-color: #f2f2f2;}
+.view_diet_table #view_table_tableid tr:nth-child(even){background-color: #f2f2f2;}
+.view_hist_table #view_table_tableid tr:nth-child(even){background-color: #f2f2f2;}
+.breakfast_id #view_table_tableid tr:nth-child(even){background-color: #f2f2f2;}
+.lunch_id #view_table_tablelnid tr:nth-child(even){background-color: #f2f2f2;}
+.dinner_id #view_table_tabledinid tr:nth-child(even){background-color: #f2f2f2;}
+
+.view_table #view_table_tableid tr:hover {background-color: #ddd;}
+.view_hist_table #view_table_tableid tr:hover {background-color: #ddd;}
+.breakfast_id #view_table_tableid tr:hover {background-color: #ddd;}
+.lunch_id #view_table_tablelnid tr:hover {background-color: #ddd;}
+.dinner_id #view_table_tabledinid tr:hover {background-color: #ddd;}
+
+
+.view_table #view_table_tableid th , .view_diet_table #view_table_tableid th, .view_hist_table #view_table_tableid th,.breakfast_id #view_table_tableid th,.lunch_id #view_table_tablelnid th, .dinner_id #view_table_tabledinid th
+{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgba(223, 89, 0, 0.973);
+  color: white;
+}
+
+
+.single_button{
+   
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 12%;
+   left : 7%;
+   background-color: rgba(223, 89, 0, 0.973);
+   color: white; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.single_button:hover {
+      background-color: #4CAF50;
+      color: white;
+}
+
+.single_button_history{
+
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 140%;
+   left : 40%;
+   background-color: rgba(223, 89, 0, 0.973);
+   color: white; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.single_button_history:hover {
+      background-color: #4CAF50;
+      color: white;
+}
+
+.information_message
+{
+   border: 3px ;
+   border-style:solid; 
+   border-color:rgb(34, 36, 192);
+  margin-top: 100px;
+  margin-right: 400px;
+  margin-left: 400px;
+  padding: 25px 20px 50px 20px;
+  text-align: center;
+
+}
+
+.input_form_progress{
+   border: 3px ;
+   border-style:solid; 
+   border-color:rgb(34, 36, 192);
+   text-align: left;
+   margin-top: 30px;
+  margin-right: 300px;
+  margin-left: 300px;
+  padding: 20px 20px 40px 20px;   
+}
+.submit_button_progress{
+   
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 50%;
+   left : 45%;
+   background-color: rgba(223, 89, 0, 0.973);
+   color: white; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.submit_button_progress:hover {
+      background-color: #4CAF50;
+      color: white;
+}
+
+.input_form{
+   border: 3px ;
+   border-style:solid; 
+   border-color:rgb(34, 36, 192);
+   text-align: left;
+   margin-top: 40px;
+  margin-right: 400px;
+  margin-left: 400px;
+  padding: 20px 20px 40px 20px;   
+}
+
+.submit_button{
+   
+   width: Xu;
+   height: Yu;
+   position: absolute;
+   top: 41%;
+   left : 45%;
+   background-color: rgba(223, 89, 0, 0.973);
+   color: white; 
+   margin-left: -(X/2)u;
+   margin-top: -(Y/2)u;
+}
+
+.submit_button:hover {
+      background-color: #4CAF50;
+      color: white;
+}
+
+.breakfast_id{
+   border: 1px solid black;
+   position : static;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+  background-color: rgb(150, 235, 220);
+}  
+
+#breakfast_time{
+margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+}
+
+.lunch_id{
+   border: 1px solid black;
+   position: static;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+  background-color: rgb(150, 235, 220);
+}  
+
+#lunch_time{
+margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+}
+
+.dinner_id{
+   border: 1px solid black;
+   position: static;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+  background-color: rgb(150, 235, 220);
+}  
+
+#dinner_time{
+margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 400px;
+  margin-left: 80px;
+}
+
+.place_order{
+   position: static;
+   width: Xu;
+   height: Yu;
+   margin-top: 10px;
+  margin-bottom: 50px;
+  margin-right: 200px;
+  margin-left: 350px;
+   background-color: rgba(223, 89, 0, 0.973);
+   color: white; 
+}
+
+.place_order:hover {
+      background-color: #4CAF50;
+      color: white;
+}
+</style>

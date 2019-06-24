@@ -1,0 +1,48 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+     <% include css/restaurant_format %>
+     <script type="text/javascript">
+     function validate(){
+        frmdte = document.getElementById.fromdate;
+        todte = document.getElementById.todte;
+
+        errors = '';
+        if(frmdte == ''){
+            errors+="Select a From Date.\n";
+        }
+        if (todte == ''){
+            errors+="Select a To Date.\n"
+        }
+        if (errors!=''){
+            alert(errors);
+        }
+        else{
+            document.rviewreport.submit();
+        }
+     }
+
+     </script>
+</head>
+<header>
+    <% include restaurant_loggedin_header %>
+    
+</header>
+<body>
+
+<div class="centered_div">
+
+    <form name="rviewreport" id="rviewreport" method = 'POST' action ='/r_generated_report'>
+        <div>
+		<table class="home-table">
+						<tr><td>  <label>Select From Date</label>  <input id="frmdte" name="frmdte" type="date" class="required" title="frmdte"> </td> </tr>
+						<tr><td>  <label>Select To Date</label>  <input id="todte" name="todte" type="date" class="required" title="todte"> </td> </tr>
+						<tr><td>	<button type="button"  class="button" onclick="validate()"> Generate Report</button> </td> </tr>
+            </table>
+        </div>
+	</form>
+     </div>       
+</body>
+</html>

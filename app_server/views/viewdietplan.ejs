@@ -1,0 +1,65 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+        <header>
+                <% include customerheader %>
+            </header>
+<% if (items_present=='Y' ) { %>
+    
+    
+
+    <form action="/reqchangedp">
+        <input type="submit" class = "single_button" value="Request Change Of Diet Plan " />
+    </form>
+
+    <div class="heading_style">
+    <h1>Current Diet Plan Details</h1> </div>
+
+    <div class="view_diet_table">
+        
+		<div id="view_table_tableid">
+            <table>
+                <tr>   
+                     <th> &nbsp;&nbsp; Day &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Meal Type &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th>
+                     <th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th> 
+                 </tr>							
+                
+                    <% for(var i=0; i < query_results.length; i++) { %>
+                    <tr>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].day %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].meal_type %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].calories %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].proteins %>&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].fat %>&nbsp;&nbsp;</td>
+                    </tr>
+                    <% } %>  
+                                            
+        </div>
+    </div>
+
+   
+
+<% } %>
+<% if (items_present=='N' ) { %>
+    <div class="information_message">
+            <h3>    Sorry....You are not enrolled in any diet plan. </h3>
+    </div>
+<% } %>
+
+            
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/customer_format %>
+    
+</head>
+
+<body>
+        <header>
+                <% include customerheader %>
+            </header>
+<% if (items_present=='Y' ) { %>
+    
+    <div class="heading_style">
+    <h1>Previous Diet Plans</h1> </div>
+
+    <div class="view_table">
+            
+        <div id="view_table_tableid">
+            <table>
+                <tr>
+                     <th> &nbsp;&nbsp; SelectDietPlan &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; DieticianName &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Qualification &nbsp;&nbsp;</th> 
+                     <th> &nbsp;&nbsp; Start Date &nbsp;&nbsp;</th>
+                 </tr>							
+                 <form name="viewdiethistory" id="viewdiethistory" method="POST" >
+                    <% for(var i=0; i < query_results.length; i++) { %>
+                    <tr>
+                        <% var comb = query_results[i].dietician_id+','+query_results[i].diet_plan_id%>
+                        <td> <input type="radio" name="customer_dietician_startdate_ID" value= <%=  comb %> > </td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].dietician_name %>&nbsp;&nbsp;
+                        <td>&nbsp;&nbsp; <%=  query_results[i].qualification %> &nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp; <%=  query_results[i].diet_start_date %>&nbsp;&nbsp;</td>
+                    </tr>
+                    <% } %>  
+                </table>
+                    <button type="submit" class = "single_button_history" formaction="/viewdiethistorydetails">View Details</button>
+                </form>                          
+        </div>
+    </div>
+
+<% } %>
+<% if (items_present=='N' ) { %>
+    <div class="information_message">
+            <h3>  Sorry.....You dont have any previous Dietplan History </h3> 
+    </div>
+<% } %>
+
+            
+</body>
+</html>

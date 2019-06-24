@@ -1,0 +1,60 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+   
+    
+     <% include css/restaurant_format %>
+    
+</head>
+
+<body>
+<header>
+    <% include restaurant_loggedin_header %>
+</header>
+   
+<div class="restaurant_main_display">
+<h2> Menu </h2>
+	<% if (items_present=='Y' ) { %>
+			<table id="restaurant_view_table">
+   						<tr>
+   						                     		<th> &nbsp;&nbsp; Offered &nbsp;&nbsp;</th> 
+   						
+                     		<th> &nbsp;&nbsp; DayOfWeek &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; MealType &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; ItemName &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; Calories &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; Proteins &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; Carbohydrates &nbsp;&nbsp;</th> 
+                     		<th> &nbsp;&nbsp; Fat &nbsp;&nbsp;</th> 
+                     		
+                		</tr>							
+                    	<% for(var i=0; i < query_results.length; i++) { %>
+                    		<tr>
+                    		                        		<td>&nbsp;&nbsp; <%=  query_results[i].offered_ind %> &nbsp;&nbsp;</td>
+                    		
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].day_of_week %> &nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].meal_type %> &nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].calories  %>&nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].proteins  %>&nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].carbohydrates  %>&nbsp;&nbsp;</td>
+                        		<td>&nbsp;&nbsp; <%=  query_results[i].fat  %>&nbsp;&nbsp;</td>
+                           </tr>
+                    	<% } %>  
+               
+             </table> 
+                      
+<% } %>
+</div>
+
+<%  if (items_present=='N' ) { %>
+    	<div class="no_data_information_message">
+        	<p>  Please add items to menu! </p>
+    	</div>
+<% } %>
+
+            
+</body>
+</html>

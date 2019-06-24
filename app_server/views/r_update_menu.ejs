@@ -1,0 +1,44 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+	 <% include css/restaurant_format %>
+	 
+	 <script type="text/javascript">
+	 
+	 function validate()
+	 {
+		 console.log("inside validate function");
+		 document.updatemenu.submit();
+	 }
+	 </script>
+    
+</head>
+
+<body>
+<header>
+    <% include restaurant_loggedin_header %>
+</header>
+	<form id ='updatemenu' name = 'updatemenu' method='post' action ='/updatemenupage'>
+			<div class="restaurant_main_display">	
+					<table id="restaurant_view_table">
+						<tr>
+							<th> &nbsp;&nbsp;  &nbsp;&nbsp;</th> 
+							<th> &nbsp;&nbsp; List of items offered &nbsp;&nbsp;</th> 
+							
+						</tr>							
+						
+						<% for(var i=0; i < query_results.length; i++) { %>
+							<tr>
+								<td> <input type="radio" name="itemname" id = 'itemname' value= "<%=  query_results[i].item_name %>" </td>
+								<td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+							</tr>
+						<% } %>  
+					</table> 
+					<td><button type="button"  onclick="validate()" id="buttonid">Update selected item</button></td>
+					<br><br><br>
+				</form>         
+		</div>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <% include head %>
+	 <% include css/restaurant_format %>
+	 
+	 <script type="text/javascript">
+	 
+	 function validate()
+	 {
+		 document.updatemenupage.submit();
+	 }
+	 </script>
+    
+</head>
+
+<body >
+<header>
+    <% include restaurant_loggedin_header %>
+</header>
+<form id ='updatemenupage' name = 'updatemenupage' method='post' action ='/updatemenupagedays'>
+			<div class="restaurant_main_display">	
+					<table id="restaurant_view_table">
+						<tr>
+							<th> &nbsp;&nbsp;  &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Item &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Offerred On Days &nbsp;&nbsp;</th> 
+                            <th> &nbsp;&nbsp; Item Offered &nbsp;&nbsp;</th> 
+
+						</tr>							
+						
+						<% for(var i=0; i < query_results.length; i++) { %>
+							<tr>
+                                <% if (query_results[i].item_offered == 'Y') {%>
+                                <td> <input type="checkbox" id ="day_of_week" name="day_of_week" value= <%=  query_results[i].day_of_week %> checked></td>
+                                <% } else { %>
+                                    <td> <input type="checkbox" id="day_of_week" name="day_of_week" value= <%=  query_results[i].day_of_week %> ></td>
+<% } %>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].item_name %> &nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].day_of_week %> &nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp; <%=  query_results[i].item_offered %> &nbsp;&nbsp;</td>
+
+							</tr>
+                        <% } %>  
+                    </table> <br><br><br>
+                    <td><button type="button"  onclick="validate()" id="buttonid">Update</button></td>
+                </form>      <br><br><br>
+				           
+                 
+                        
+				
+					
+		</div>   
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!-- “SJSU CMPE 226 Spring 2019 TEAM2” -->
+<!DOCTYPE html>
+<head>
+        <% include head %>
+         <% include css/customer_format %>
+  
+    </head>
+
+  <body>
+        <header>
+            <% include customerheader %>
+            </header>
+
+            <div class="heading_style">
+            <h2>Update Diet Progress</h2> </div>
+
+            <div class = "input_form_progress">
+
+            <form name="updatedietprogress" id="updatedietprogress" method="post" action="/updateconfirmation">
+              <fieldset>
+                <p>
+                
+
+                <p>
+                    <label for="input_date">Please Enter the date(YYYY-MM-DD) for which you want to log in your progress</label> <input id="input_date" 
+                        name="input_date" type="text"  class="required"  title="input_date" >
+                  </p>
+    
+                <p>
+                    Did You Follow Your Diet For Breakfast:
+                    <select name="breakfast" id = 'breakfast'>
+                      <option value="Y"  selected> Yes </option> // Pre-selected
+                      <option value="N"> No </option>
+                    </select>
+          
+                </p>
+
+                <p>
+                    Did You Follow Your Diet For Lunch:
+                    <select name="lunch" id = 'lunch'>
+                      <option value="Y"  selected> Yes </option> // Pre-selected
+                      <option value="N"> No </option>
+                    </select>
+          
+                </p>
+
+                <p>
+                    Did You Follow Your Diet For Dinner:
+                    <select name="dinner" id = 'dinner'>
+                      <option value="Y"  selected> Yes </option> // Pre-selected
+                      <option value="N"> No </option>
+                    </select>
+          
+                </p>
+
+                <p>
+                  <label for="additional_intake">If You Have Taken Any Additional Intake, Please Mention:</label> <input id="additional_intake" 
+                      name="additional_intake" type="text"  class="required"  title="additional_intake" >
+                </p>
+
+                <p>
+                  <input type = "submit" class = "submit_button_progress" value = "Submit" >
+
+                  
+                </p>
+              </fieldset>
+            </form>
+              
+          </div>
+
+  </body>
+  
+
+</html>
